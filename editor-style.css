@@ -1186,22 +1186,15 @@ dd {
 }
 
 #content {
-  margin: 0 0 60px 0;
-  padding: 45px 1em;
+  margin: 0;
   position: relative;
-}
-@media screen and (min-width: 1400px) {
-  #content {
-    padding: 0;
-  }
-}
-
-.home #content {
-  padding: 0;
+  background: #f3f3f3;
 }
 
 .content-primary {
   width: 73.9%;
+  padding: 45px 1.5em;
+  background: white;
 }
 
 .page__section {

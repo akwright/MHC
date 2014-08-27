@@ -128,17 +128,16 @@ dd {
 }
 
 #content {
-	margin: 0 0 $row-height*4 0;
-    padding: $row-height*3 1em;
+	margin: 0;
 	position: relative;
-  
-    @media screen and (min-width: 1400px) { padding: 0; }
+    background: lighten($color-light, 1%);
 }
-.home #content { padding: 0; }
 
 .content-primary {
 	@extend .column;
 	width: $nine-columns;
+    padding: $row-height*3 1.5em;
+    background: white;
 }
 
 .page__section {

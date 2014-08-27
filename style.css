@@ -1208,22 +1208,15 @@ dd {
 }
 
 #content {
-  margin: 0 0 60px 0;
-  padding: 45px 1em;
+  margin: 0;
   position: relative;
-}
-@media screen and (min-width: 1400px) {
-  #content {
-    padding: 0;
-  }
-}
-
-.home #content {
-  padding: 0;
+  background: #f3f3f3;
 }
 
 .content-primary {
   width: 73.9%;
+  padding: 45px 1.5em;
+  background: white;
 }
 
 .page__section {
@@ -2066,8 +2059,17 @@ button, .button, input[type=submit] {
   width: 100%;
 }
 
+.page-title {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.home #content {
+  background: transparent;
+}
+
 .home .content-primary {
   width: 100%;
+  padding: 0;
 }
 
 .home blockquote {
@@ -2076,6 +2078,10 @@ button, .button, input[type=submit] {
 
 #page.attachment #page-bottom {
   display: none;
+}
+
+.products .content-primary {
+  width: 100%;
 }
 
 .error404 h2 {
@@ -2087,7 +2093,7 @@ button, .button, input[type=submit] {
 
 .sidebar {
   width: 21.679%;
-  margin-top: 10px;
+  padding-top: 45px;
 }
 .sidebar .widget {
   margin-right: 0;

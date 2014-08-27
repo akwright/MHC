@@ -1,5 +1,8 @@
+.home #content { background: transparent; }
+
 .home .content-primary {
   width: $twelve-columns;
+  padding: 0;
 }
 
 .home blockquote { margin-top: 0; }

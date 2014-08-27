@@ -3,7 +3,7 @@
  * @package MHC
  */
 ?>
-<aside id="sidebar" role="complementary">
+<aside class="sidebar" role="complementary">
 	<?php if ( !dynamic_sidebar( 'Post Right Aside' ) ) : ?>
 		<h3>
 			<?php _e( 'About This Site', 'mhc_theme' ); ?>

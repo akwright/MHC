@@ -3,7 +3,7 @@
  * @package MHC
  */
 ?>
-<aside id="sidebar" class="sidebar" role="complementary"> 
+<aside class="sidebar" role="complementary"> 
   <?php if ( ! dynamic_sidebar( 'Index Right Aside' ) ) : ?>
     <?php
       $taxonomy_names = get_object_taxonomies( get_post_type( get_the_ID() ) );

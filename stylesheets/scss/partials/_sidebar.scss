@@ -1,7 +1,7 @@
 .sidebar {
 	@extend .column;
 	width: $three-columns;
-	margin-top: 10px;
+	padding-top: $row-height*3;
 	
 	.widget {
 		margin-right:0;

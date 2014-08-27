@@ -10,11 +10,11 @@
       <?php if ( have_posts() ) : ?>
       <header>
         <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
-        <h1 class="page-title">Products</h1>
+        <h1 class="page-title">All Products</h1>
       </header>
       <div class="posts">
         <?php while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( 'partials/posts/post' ); ?>
+        <?php get_template_part( 'partials/posts/post', 'archive' ); ?>
         <?php endwhile; ?>
       </div>
       <?php get_template_part( 'partials/post-pagination' ); ?>
@@ -28,7 +28,6 @@
       </div>
       <?php endif; ?>
     </main>
-    <?php get_template_part( 'partials/sidebars/sidebar', 'archive_nav' ); ?>
   </div>
 </div>
 <?php get_footer(); ?>
