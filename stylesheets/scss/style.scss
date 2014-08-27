@@ -1,0 +1,38 @@
+/*!
+Theme Name:     MHC
+Description:    Custom theme built for Mission Health Concepts, based on Frank
+Author:         Alex Wright
+Author URI:     http://akwright.com
+Version:        0.9.3
+License:		GPL 3.0
+License URI:	http://www.gnu.org/copyleft/gpl.html
+Tags: 			brown, red, white, two-columns, fixed-width, sticky-post, custom-menu
+*/
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/extensions";
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/global";
+
+@import "modules/typography";
+@import "modules/buttons";
+@import "modules/metadata";
+@import "modules/wordpress";
+@import "modules/widgets";
+@import "modules/forms";
+
+@import "partials/transitions";
+@import "partials/header";
+@import "partials/posts";
+@import "partials/post-groups";
+@import "partials/single";
+@import "partials/page";
+@import "partials/home";
+@import "partials/attachment";
+@import "partials/archive";
+@import "partials/fourohfour";
+@import "partials/sidebar";
+@import "partials/comments";
+@import "partials/footer";

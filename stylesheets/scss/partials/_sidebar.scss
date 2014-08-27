@@ -1,0 +1,25 @@
+.sidebar {
+	@extend .column;
+	width: $three-columns;
+	margin-top: 10px;
+	
+	.widget {
+		margin-right:0;
+	}
+	
+	.widget-title:first-child { 
+		margin-top: 0 !important; 
+	}
+}
+
+.sb__menu {
+  margin: 0; padding: 0;
+  list-style: none;
+  
+  li { }
+}
+
+.products {
+  //main { @extend .push-three; }
+  //.sidebar { @extend .pull-nine; }
+}

@@ -1,0 +1,55 @@
+$color-accent: #005596;
+$color-highlight: #fffefe;
+$color-light: #f0f0f0;
+$color-midtone: #555;
+$color-dark: #333;
+$color-off-black: #050000;
+
+$color-midtone-light: #998482;
+$color-accent-alt: #ffcf01;
+
+$typeface-heading: "Bitter", Georgia, serif;
+$typeface-body: "Source Sans Pro", Arial, sans-serif;
+$typeface-sansserif: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+
+$typeface-secondary: $typeface-sansserif;
+$typeface-primary: $typeface-body;
+
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300; 
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-demi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+$font-weight-black: 900;
+
+$font-size-xxx-large: 2.75em;
+$font-size-xx-large: 2em;
+$font-size-x-large: 1.75em;
+$font-size-large: 1.5em;
+$font-size-medium: 1em;
+$font-size-small: .938em;
+$font-size-x-small: .875em;
+$font-size-xx-small: .813em;
+$font-size-xxx-small: .750em;
+
+$one-column: 4.3%;
+$two-columns: 13%;
+$three-columns: 21.679%;
+$four-columns: 30.37%;
+$five-columns: 39.1%; 
+$six-columns: 47.8%;
+$seven-columns: 56.5%;
+$eight-columns: 65.2%;
+$nine-columns: 73.9%;
+$ten-columns: 82.6%; 
+$eleven-columns: 91.3%;
+$twelve-columns: 100%;
+
+$row-height: 15px;
+$column-width: 45px;
+$gutter-width: 40px;
+
+$border-break: 2px solid $color-light;

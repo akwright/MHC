@@ -1,0 +1,111 @@
+<p><a name="development-setup"></a></p>
+
+<h2>Development Setup</h2>
+
+<p>If you have cloned mhc from the Github repo, you will need to build the files for it to run properly. There are two different methods to do this:</p>
+
+<h3>Method #1: Less Steps, Less Awesomeness</h3>
+
+<p>Sometimes you just need the basics. If running commands in the terminal is a little too much for you, we suggest you use a tool like <a href="http://incident57.com/codekit/">CodeKit</a> to help you with the preprocessor compiling.</p>
+
+<h4>Setup</h4>
+
+<p>CodeKit will ask you to add a project. Just select the &lsquo;mhc&rsquo; theme folder and CodeKit should do the rest. <em>Note: You&rsquo;re going to have much less control and ability to optimize the theme through with method. This approach is advisable if you just want to build mhc the quick-and-dirty way.</em></p>
+
+<h3>Method #2: More Steps, More Awesomeness</h3>
+
+<p>If you want to get into the nitty-gritty and really get mhc running as fast as possible, you&rsquo;ll need to use our Grunt tasks.</p>
+
+<h4>Setup</h4>
+
+<p>mhc&rsquo;s automation tools use <a href="http://nodejs.org/download/">Node.js</a>, <a href="http://www.ruby-lang.org/en/downloads/">Ruby</a>, <a href="http://compass-style.org/install/">Compass</a>, <a href="http://sass-lang.com/download.html">SASS</a>, <a href="http://zmoazeni.github.io/csscss/">CSSCSS</a>, <a href="http://getcomposer.org/download/">Composer</a> and <a href="https://developers.google.com/speed/webp/download">WebP</a>. Phew, that&rsquo;s a mouthful. We&rsquo;re constantly working to whittle this list down, but for now, this is what&rsquo;s necessary.</p>
+
+<h5>Install Node.js</h5>
+
+<p><a href="http://nodejs.org/">Download the installer</a></p>
+
+<p>If you&rsquo;d prefer to use a package manager, <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">here&rsquo;s a full run-down</a> on all the ways to do it.</p>
+
+<h5>Install Ruby 1.90+</h5>
+
+<p>Many of the Grunt tasks rely on Ruby gems to do some of the heavy lifting. The gems used depend on Ruby <em>1.90+</em>. To see what version of Ruby you&rsquo;re running, run the following command in your terminal:</p>
+
+<p> <code>$ ruby -v</code></p>
+
+<h5>Install Compass</h5>
+
+<p>We rely on Compass to make SASS preprocessing all that more awesome. Install Compass by running:</p>
+
+<p><code>$ gem update --system &amp;&amp; gem install compass</code></p>
+
+<h5>Install SASS</h5>
+
+<p>All CSS for the theme is generated from SASS. Install SASS on your machine by running:</p>
+
+<p><code>$ gem update --system &amp;&amp; gem install sass</code></p>
+
+<h5>Install CSSCSS</h5>
+
+<p>mhc uses <a href="https://github.com/zmoazeni/csscss">CSSCSS</a> to check for CSS rule redundancy. Install CSSCSS by running:</p>
+
+<p><code>$ gem update --system &amp;&amp; gem install csscss</code></p>
+
+<h5>Install Composer</h5>
+
+<p>mhc also uses the PHP package manager [http://getcomposer.org/]Composer for a couple of tasks. Refer to <a href="http://getcomposer.org/doc/00-intro.md#downloading-the-composer-executable">Composer&rsquo;s installation documentation</a> for a detailed breakdown of all options.</p>
+
+<h5>Install WebP binary</h5>
+
+<p>The <a href="https://github.com/somerandomdude/grunt-webp">grunt-webp</a> plugin depends on Google&rsquo;s <a href="https://developers.google.com/speed/webp/">WebP</a> binary. You&rsquo;ll need to <a href="https://developers.google.com/speed/webp/download">download the cwebp binary</a> and install it locally.</p>
+
+<h5>Package Installations</h5>
+
+<p><a href="http://gruntjs.com/getting-started">Full details on getting started with Grunt</a></p>
+
+<p>Open up a terminal window, <code>cd</code> into the mhc theme folder and run the following commands:</p>
+
+<p><code>$ php composer.phar install</code></p>
+
+<p><code>$ npm install</code></p>
+
+<p>Once that&rsquo;s complete, you&rsquo;ll need to install the <a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards">WordPress Coding Standard</a> for PHP_Codesniffer.</p>
+
+<p>And with that, you&rsquo;re <em>finally</em> done.</p>
+
+<h4>Use</h4>
+
+<h5>General Development</h5>
+
+<p>For basic compilation of SASS and CoffeeScript files, run the following command in your terminal:</p>
+
+<p><code>$ grunt</code></p>
+
+<h5>Automatic SASS/Coffeescript Compilation</h5>
+
+<p>If you&rsquo;re modifying mhc and want your SASS and CoffeeScript to build when a file is modified, run:</p>
+
+<p><code>$ grunt watch</code></p>
+
+<h5>Testing, Linting and Code Quality</h5>
+
+<p>We don&rsquo;t have a ton of tests running just yet, but have a lot more in store for the future. To test your files, run:</p>
+
+<p><code>$ grunt test</code></p>
+
+<h5>Optimization</h5>
+
+<p>mhc is all about optimization, so a lot of the magic happens here. To run all the optimization tasks, run:</p>
+
+<p><code>$ grunt opt</code></p>
+
+<h5>Generating Documentation</h5>
+
+<p>To build the documentation, run:</p>
+
+<p><code>$ grunt docs</code></p>
+
+<h5>Distribution</h5>
+
+<p>If you&rsquo;d like a clean copy of the theme without any of the files for development or preprocessor files, run:</p>
+
+<p><code>$ grunt dist</code></p>

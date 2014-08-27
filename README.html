@@ -1,0 +1,360 @@
+<h1>mhc</h1>
+
+<h2>mhc is an open source WordPress theme designed for speed</h2>
+
+<p><a href="https://travis-ci.org/somerandomdude/mhc"><img src="https://travis-ci.org/somerandomdude/mhc.png" alt="Build Status" /></a></p>
+
+<h2>README Contents</h2>
+
+<ul>
+<li><a href="#about-mhc">About mhc</a></li>
+<li><a href="#using-mhc">Using mhc</a>
+
+<ul>
+<li><a href="#using-mhc-javascript-modules">Javascript Modules</a></li>
+<li><a href="#using-mhc-theme-options">Theme Options</a></li>
+<li><a href="#using-mhc-theme-modification">Theme Modification</a></li>
+<li><a href="#using-mhc-theme-optimization">Theme Optimization</a></li>
+</ul>
+</li>
+<li><a href="#development-setup">Development Setup</a></li>
+<li><a href="#browser-compatibility">Browser Compatibility</a></li>
+<li><a href="#wordpress-compatibility">WordPress Compatibility</a></li>
+<li><a href="#credits">Credits</a></li>
+</ul>
+
+
+<p><a name="about-mhc"></a></p>
+
+<h2>About mhc</h2>
+
+<p>This theme has been the personal project of <a href="http://somerandomdude.com">P.J. Onori</a> with the gracious <a href="#credits">help of many</a>. The theme was designed to provide a lightweight theme focused on the reading experience. mhc is the parent theme of <a href="https://github.com/somerandomdude/mhc-somerandomdude">mhc of Some Random Dude</a>, the theme I use on somerandomdude.com</p>
+
+<h3>mhc is fast</h3>
+
+<p>mhc&rsquo;s main focus is speed. The parent theme&rsquo;s default home page makes 9 database queries and consists of 2 requests weighing ~29Kb (9.3Kb gzipped). mhc keeps it basic—no Javascript frameworks, no unnecessary images, just a simple, no-frills, screaming fast blog.</p>
+
+<h3>mhc is flexible</h3>
+
+<p>mhc has several different layouts to choose from for your home page. Most layouts let you specify the number of posts to show and from what categories. Templates can be stacked by any amount and order to give you the structure you need. Additionally, there are plenty of well-placed widgets that will give you that extra level of customization.</p>
+
+<h3>mhc is forward-thinking</h3>
+
+<p>mhc is built on HTML5 and CSS3. The theme strives for 100% valid HTML5 templates. One way mhc is so small is that it uses CSS3&rsquo;s effects and transitions to avoid unneeded images and Javascript. One side effect of this approach is that mhc does not support Internet Explorer 6 and <em>moderately</em> supports Internet Explorer 8.</p>
+
+<h3>mhc fits on your phone</h3>
+
+<p>mhc uses a subset of <a href="http://foundation.zurb.com/">Foundation</a> to provide a responsive layout for desktops, tablets and phones. Add this to the theme&rsquo;s small footprint and you have a mobile-optimized blog.</p>
+
+<h3>mhc is for you</h3>
+
+<p>This theme is 100% open source and developer friendly. The parent theme (/mhc) is under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU Public License</a>.</p>
+
+<h3>mhc ain&rsquo;t finished</h3>
+
+<p>There is always more to do, but I need help. This project relies on community support, so if you find this theme helpful, please contribute.</p>
+
+<p><a name="using-mhc"></a></p>
+
+<h2>Using mhc</h2>
+
+<p><a name="using-mhc-javascript-modules"></a></p>
+
+<h3>Javascript Modules</h3>
+
+<h4>defer-image-load.js</h4>
+
+<p>By default, the <code>defer-image-load.js</code> script is not loaded in the theme. You&rsquo;ll need to add the script within the <code>&lt;head&gt;</code> tag.</p>
+
+<h5>Usage</h5>
+
+<p><code>
+&lt;img data-defer-src="/path/to/image.png" width="300" height="300" alt="Deferred Image" /&gt;
+</code></p>
+
+<h4>mhc.slideshow.js</h4>
+
+<p>The mhc slideshow will be replaced with <a href="https://github.com/benschwarz/gallery-css/">Gallery CSS</a> in the upcoming 0.9.4 release.</p>
+
+<h4>simplebox.js</h4>
+
+<p>The mhc modal will be replaced with <a href="https://github.com/drublic/css-modal">CSS Modal</a> in the upcoming 0.9.4 release.</p>
+
+<p><a name="using-mhc-theme-options"></a></p>
+
+<h3>Theme Options</h3>
+
+<p>mhc supports all the basic WordPress theme options you expect (plus more). All basic options (Widgets, Menus, Header &amp; Background) can be found in the <em>Appearance</em> section. mhc also comes with theme-specific options found under <em>Appearance > mhc Theme Options</em>.</p>
+
+<h4>General Settings</h4>
+
+<p>mhc&rsquo;s General settings allow for small site adjustments, when you don&rsquo;t want to open up the hood and get your hands dirty.</p>
+
+<h5>Custom Header Code</h5>
+
+<p>The Custom Header Code setting allows you to add code in the <code>head</code> tag. This can be useful for adding Google Analytics/TypeKit Javascript snippets.</p>
+
+<h5>Custom Footer Code</h5>
+
+<p>The Custom Footer Code setting allows you to add code above the closing <code>body</code> tag. This can be used for quickly adding third-party Javascript references (e.g., Google&rsquo;s hosted Javascript libraries).</p>
+
+<h5>Tweet This/Twitter Handle</h5>
+
+<p>The Tweet This setting adds a tweet button on the left column of the single.php template. The tweet button replicates Twitter&rsquo;s own button without a reliance on Javascript. The Twitter Handler setting will add <em>via @[USERNAME]</em> to the end of the pre-filled tweet.</p>
+
+<h4>Home Page Settings</h4>
+
+<p>The mhc homepage template is set up to have customizable, modular content sections to display your posts in different ways.</p>
+
+<h5>Adding Content Sections</h5>
+
+<p>A new content section can be added by clicking the <em>Add New Section</em> button. This will add a blank section to the bottom of the section list. The section will not be displayed on your home page until you save the settings.</p>
+
+<h5>Removing Content Sections</h5>
+
+<p>Any section can be deleted by clicking the × button on the top right corner of the section pane. The section will not be removed from your home page until you save the settings.</p>
+
+<h5>Changing the Order of Content Sections</h5>
+
+<p>Sections can be dragged into the desired order by dragging the handle on the top left corner of any settings pane. The order will not be changed on your home page until you save the settings.</p>
+
+<h5>Display Section Header</h5>
+
+<p>Each section can have an individual title and caption. Checking this setting will allow you to enter a title and caption to be displayed at the top of the section.</p>
+
+<h5>Section Header</h5>
+
+<p>A title for the content section.</p>
+
+<h5>Section Caption</h5>
+
+<p>A description for the content section.</p>
+
+<h5>Display Type</h5>
+
+<p>mhc has various loop types for the home page, depending on your needs.</p>
+
+<ul>
+<li><p><strong>Default Loop</strong>: This loop is the basic loop found in most WordPress themes. It incorporates none of the options found in other loops, such as custom post counts, category filters etc. The Default loop also displays a sidebar on the right hand side.</p></li>
+<li><p><strong>One Up (Regular)</strong>: The One Up loop displays one post per column with with no sidebar. The typographic size of the header and copy closely resemble that of the Default Loop.</p></li>
+<li><p><strong>One Up (Large)</strong>: The One Up Large loop displays one post per column with with no sidebar. The typographic size of the header is much larger, making it suitable for a featured section.</p></li>
+<li><p><strong>Two Up</strong>: The Two Up loop two posts per column with with no sidebar.</p></li>
+<li><p><strong>Three Up</strong>: The Three Up loop two posts per column with with no sidebar.</p></li>
+<li><p><strong>Four Up</strong>: The Four Up loop two posts per column with with no sidebar.</p></li>
+</ul>
+
+
+<h5>Number of Posts</h5>
+
+<p>This setting allows you to define how many posts you want displayed in the loop. <strong>Note:</strong> This setting does not work for the Default Loop as it will use the number of posts defined in by the <em>Blog pages show at most</em> setting in Settings > Reading.</p>
+
+<h5>Categories to Display</h5>
+
+<p>If you only want to show specific categories in a section, you can choose which to display in the checklist. <strong>Note:</strong> If no categories are selected, the section will default to displaying <em>all</em> categories (I know, this is a little wonky, I will be working on this in future versions). This setting will also not work for the Default Loop.</p>
+
+<h4>Performance Settings</h4>
+
+<h5>Remove WordPress version meta tag</h5>
+
+<p>There are potential security risks associated with exposing your version of WordPress. Removing this meta tag will also shave a few bytes off of the generated HTML.</p>
+
+<h5>Remove version URL parameter from scripts</h5>
+
+<p>The version URL parameter can prevent files from caching in certain browsers. If you want more reliable caching of your scripts, turn this feature on.</p>
+
+<h5>Remove version URL parameter from stylesheets</h5>
+
+<p>The version URL parameter can prevent files from caching in certain browsers. If you want more reliable caching of your stylesheets, turn this feature on.</p>
+
+<p><a name="using-mhc-theme-modification"></a></p>
+
+<h3>Theme Modification</h3>
+
+<p>The mhc theme was always intended to be built upon. All CSS and Javascript are compiled from pre-processor languages (<a href="http://sass-lang.com/">SCSS</a> &amp; <a href="http://coffeescript.org/">CoffeeScript</a>). For those with less experience using pre-processor languages (especially how to compile them through the command line), For a full run-down on how to modify mhc, refer to the <a href="#development-setup">development setup</a> section. It is also highly suggested that any significant modifications are built out as a <a href="http://codex.wordpress.org/Child_Themes">child theme</a>.</p>
+
+<h4>Compass</h4>
+
+<p>mhc uses <a href="http://compass-style.org/">Compass</a> for SCSS compilation and takes advantage of its mixins and functions. <a href="http://compass-style.org/install/">Installing Compass</a> is necessary to successfully compile the theme&rsquo;s SCSS, but it&rsquo;s quite easy. The theme includes the Compass config file to make life a little easier.</p>
+
+<h4>SCSS Structure</h4>
+
+<p>The styles for mhc are broken up by subject matter. The <em>style.scss</em> file is the only file you should compile. It takes all the SCSS files and builds it into the theme&rsquo;s <em>style.css</em>. All colors, typefaces, font sizes and other visual attributes can be altered in the <em>variables.scss</em> file. Site-wide styles can be found in the <em>global.scss</em> file. All template-specific styles are found in the SCSS file with its matching name.</p>
+
+<h4>Foundation-based Grid</h4>
+
+<p>mhc uses a pared-down version of <a href="foundation.zurb.com">Foundation v2</a> for its grid system. The Foundation framework was modified to remove unneeded styles and features. All Foundation code is found in <em>stylesheets/scss/grid.scss</em>.</p>
+
+<h4>CoffeeScript</h4>
+
+<p>mhc does not depend on Javascript, but it does include some small Javascript components if you need them. All Javascript is compiled from CoffeeScript files which can be found in <em>javascripts/coffeescript</em></p>
+
+<p><a name="using-mhc-theme-optimization"></a></p>
+
+<h3>Theme Optimization</h3>
+
+<p>The mhc theme is pretty lean by default, but there&rsquo;s a lot you can do to make it <em>faster</em>. Below are some simple tips for keeping mhc fast.</p>
+
+<h4>Minify style.css</h4>
+
+<p>By default, the <em>style.css</em> file is not minified for legibility. <strong>Minifying your stylesheet should be the first thing you do.</strong> The easiest way to accomplish this is to change the Compass SCSS compilation setting. To do this, open the <em>config.rb</em> file and change the <code>output_style</code> variable from <em>:expanded</em> to <em>:compressed</em>.</p>
+
+<h4>Use Widgets Wisely</h4>
+
+<p>mhc has various widget spaces for you to customize your theme. Used correctly, widgets can theoretically improve performance. The <em>Navigation</em> widget is one way to lower the amount of database queries WordPress makes (6 -7 queries in my experience). By using a text widget in the <em>Navigation</em> widget section and adding an unordered list like the example below, you can save quite a few database queries.</p>
+
+<pre><code>&lt;ul id="menu-primary" class="menu"&gt;
+    &lt;li class="menu-item"&gt;&lt;a href="/page-1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="menu-item"&gt;&lt;a href="/page-2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="menu-item"&gt;&lt;a href="/page-3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h4>Avoid jQuery (or any other JS framework for that matter)</h4>
+
+<p>mhc comes with some simple Javascript components that do not rely on jQuery. Unless your site has heavy <em>web-app-ish</em> features, it is strongly suggested to avoid using a framework.</p>
+
+<h4>Install Alternative PHP Cache (APC)</h4>
+
+<p><a href="http://php.net/manual/en/book.apc.php">APC</a> will provide significant performance increases if used correctly. There are plenty of guides for installing APC on <a href="https://www.google.com/search?q=Install+Alternative+PHP+Cache&amp;aq=f&amp;oq=Install+Alternative+PHP+Cache&amp;aqs=chrome.0.57j0l3j62l2.1033&amp;sugexp=chrome,mod=6&amp;sourceid=chrome&amp;ie=UTF-8#hl=en&amp;tbo=d&amp;sclient=psy-ab&amp;q=Install+APC+for+PHP&amp;oq=Install+APC+for+PHP&amp;gs_l=serp.3..0l3j0i30.11068.14252.0.14581.16.11.5.0.0.0.200.1813.0j10j1.11.0.les%3Bepsugrpq1high.1.0.0dist&lt;&lt;&lt;...1.1.cOdurfjGwd0&amp;pbx=1&amp;bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&amp;fp=1ad8c242e1bf948a&amp;bpcl=39967673&amp;biw=1436&amp;bih=783">Google</a>.</p>
+
+<h4>Install W3 Total Cache (W3TC)</h4>
+
+<p><a href="http://wordpress.org/extend/plugins/w3-total-cache/">W3TC</a> is the easiest way to take full advantage of APC. W3TC has a wide range of features, but if you build your theme correctly, you shouldn&rsquo;t need to use most of them.</p>
+
+<h5>W3 Total Cache Tips</h5>
+
+<ul>
+<li>Manually combine and minify your CSS/JS files. Relying on W3 Total Cache for this process will require extra CPU cycles.</li>
+<li>W3TC offers the option to connect to content delivery networks (CDNs). CDNs are great, but if you keep your site small, they become unnecessary. If your site is getting serious traffic or contains a large amount of images or video, a CDN may make sense, but for the rest of you, save your time and money.</li>
+</ul>
+
+
+<p><a name="development-setup"></a></p>
+
+<h2>Development Setup</h2>
+
+<p>If you have cloned mhc from the Github repo, you will need to build the files for it to run properly. There are two different methods to do this:</p>
+
+<h3>Method #1: Less Steps, Less Awesomeness</h3>
+
+<p>Sometimes you just need the basics. If running commands in the terminal is a little too much for you, we suggest you use a tool like <a href="http://incident57.com/codekit/">CodeKit</a> to help you with the preprocessor compiling.</p>
+
+<h4>Setup</h4>
+
+<p>CodeKit will ask you to add a project. Just select the &lsquo;mhc&rsquo; theme folder and CodeKit should do the rest. <em>Note: You&rsquo;re going to have much less control and ability to optimize the theme through with method. This approach is advisable if you just want to build mhc the quick-and-dirty way.</em></p>
+
+<h3>Method #2: More Steps, More Awesomeness</h3>
+
+<p>If you want to get into the nitty-gritty and really get mhc running as fast as possible, you&rsquo;ll need to use our Grunt tasks.</p>
+
+<h4>Setup</h4>
+
+<p>mhc&rsquo;s automation tools use <a href="http://nodejs.org/download/">Node.js</a>, <a href="http://www.ruby-lang.org/en/downloads/">Ruby</a>, <a href="http://compass-style.org/install/">Compass</a>, <a href="http://sass-lang.com/download.html">SASS</a>, <a href="http://zmoazeni.github.io/csscss/">CSSCSS</a>, <a href="http://getcomposer.org/download/">Composer</a> and <a href="https://developers.google.com/speed/webp/download">WebP</a>. Phew, that&rsquo;s a mouthful. We&rsquo;re constantly working to whittle this list down, but for now, this is what&rsquo;s necessary.</p>
+
+<h5>Install Node.js</h5>
+
+<p><a href="http://nodejs.org/">Download the installer</a></p>
+
+<p>If you&rsquo;d prefer to use a package manager, <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">here&rsquo;s a full run-down</a> on all the ways to do it.</p>
+
+<h5>Install Ruby 1.90+</h5>
+
+<p>Many of the Grunt tasks rely on Ruby gems to do some of the heavy lifting. The gems used depend on Ruby <em>1.90+</em>. To see what version of Ruby you&rsquo;re running, run the following command in your terminal:</p>
+
+<p> <code>$ ruby -v</code></p>
+
+<h5>Install Compass</h5>
+
+<p>We rely on Compass to make SASS preprocessing all that more awesome. Install Compass by running:</p>
+
+<p><code>$ gem update --system &amp;&amp; gem install compass</code></p>
+
+<h5>Install SASS</h5>
+
+<p>All CSS for the theme is generated from SASS. Install SASS on your machine by running:</p>
+
+<p><code>$ gem update --system &amp;&amp; gem install sass</code></p>
+
+<h5>Install CSSCSS</h5>
+
+<p>mhc uses <a href="https://github.com/zmoazeni/csscss">CSSCSS</a> to check for CSS rule redundancy. Install CSSCSS by running:</p>
+
+<p><code>$ gem update --system &amp;&amp; gem install csscss</code></p>
+
+<h5>Install Composer</h5>
+
+<p>mhc also uses the PHP package manager [http://getcomposer.org/]Composer for a couple of tasks. Refer to <a href="http://getcomposer.org/doc/00-intro.md#downloading-the-composer-executable">Composer&rsquo;s installation documentation</a> for a detailed breakdown of all options.</p>
+
+<h5>Install WebP binary</h5>
+
+<p>The <a href="https://github.com/somerandomdude/grunt-webp">grunt-webp</a> plugin depends on Google&rsquo;s <a href="https://developers.google.com/speed/webp/">WebP</a> binary. You&rsquo;ll need to <a href="https://developers.google.com/speed/webp/download">download the cwebp binary</a> and install it locally.</p>
+
+<h5>Package Installations</h5>
+
+<p><a href="http://gruntjs.com/getting-started">Full details on getting started with Grunt</a></p>
+
+<p>Open up a terminal window, <code>cd</code> into the mhc theme folder and run the following commands:</p>
+
+<p><code>$ php composer.phar install</code></p>
+
+<p><code>$ npm install</code></p>
+
+<p>Once that&rsquo;s complete, you&rsquo;ll need to install the <a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards">WordPress Coding Standard</a> for PHP_Codesniffer.</p>
+
+<p>And with that, you&rsquo;re <em>finally</em> done.</p>
+
+<h4>Use</h4>
+
+<h5>General Development</h5>
+
+<p>For basic compilation of SASS and CoffeeScript files, run the following command in your terminal:</p>
+
+<p><code>$ grunt</code></p>
+
+<h5>Automatic SASS/Coffeescript Compilation</h5>
+
+<p>If you&rsquo;re modifying mhc and want your SASS and CoffeeScript to build when a file is modified, run:</p>
+
+<p><code>$ grunt watch</code></p>
+
+<h5>Testing, Linting and Code Quality</h5>
+
+<p>We don&rsquo;t have a ton of tests running just yet, but have a lot more in store for the future. To test your files, run:</p>
+
+<p><code>$ grunt test</code></p>
+
+<h5>Optimization</h5>
+
+<p>mhc is all about optimization, so a lot of the magic happens here. To run all the optimization tasks, run:</p>
+
+<p><code>$ grunt opt</code></p>
+
+<h5>Generating Documentation</h5>
+
+<p>To build the documentation, run:</p>
+
+<p><code>$ grunt docs</code></p>
+
+<h5>Distribution</h5>
+
+<p>If you&rsquo;d like a clean copy of the theme without any of the files for development or preprocessor files, run:</p>
+
+<p><code>$ grunt dist</code></p>
+
+<p><a name="browser-compatibility"></a></p>
+
+<h2>Browser Compatibility</h2>
+
+<p>mhc is focused on modern desktop and mobile browser support. mhc works <em>decently</em> on Internet Explorer 8+. No guarantees are given for any earlier IE versions.</p>
+
+<p><a name="wordpress-compatibility"></a></p>
+
+<h2>WordPress Compatibility</h2>
+
+<p>mhc was built and tested on WordPress 3.4.3. Any future development of the theme will be focused on supporting the most current version of WordPress.</p>
+
+<p><a name="credits"></a></p>
+
+<h2>Credits</h2>
+
+<p>This theme was built with significant help of some great folks. My sincere thanks to <a href="http://twitter.com/felixhgren">Felix Holmgren</a>, <a href="http://twitter.com/jchristopher">Jon Christopher</a> and <a href="https://twitter.com/onestepcreative">Josh McDonald</a> for their tremendous contributions.</p>

@@ -1,0 +1,40 @@
+<p><a name="using-mhc-theme-optimization"></a></p>
+
+<h3>Theme Optimization</h3>
+
+<p>The mhc theme is pretty lean by default, but there&rsquo;s a lot you can do to make it <em>faster</em>. Below are some simple tips for keeping mhc fast.</p>
+
+<h4>Minify style.css</h4>
+
+<p>By default, the <em>style.css</em> file is not minified for legibility. <strong>Minifying your stylesheet should be the first thing you do.</strong> The easiest way to accomplish this is to change the Compass SCSS compilation setting. To do this, open the <em>config.rb</em> file and change the <code>output_style</code> variable from <em>:expanded</em> to <em>:compressed</em>.</p>
+
+<h4>Use Widgets Wisely</h4>
+
+<p>mhc has various widget spaces for you to customize your theme. Used correctly, widgets can theoretically improve performance. The <em>Navigation</em> widget is one way to lower the amount of database queries WordPress makes (6 -7 queries in my experience). By using a text widget in the <em>Navigation</em> widget section and adding an unordered list like the example below, you can save quite a few database queries.</p>
+
+<pre><code>&lt;ul id="menu-primary" class="menu"&gt;
+    &lt;li class="menu-item"&gt;&lt;a href="/page-1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="menu-item"&gt;&lt;a href="/page-2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="menu-item"&gt;&lt;a href="/page-3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h4>Avoid jQuery (or any other JS framework for that matter)</h4>
+
+<p>mhc comes with some simple Javascript components that do not rely on jQuery. Unless your site has heavy <em>web-app-ish</em> features, it is strongly suggested to avoid using a framework.</p>
+
+<h4>Install Alternative PHP Cache (APC)</h4>
+
+<p><a href="http://php.net/manual/en/book.apc.php">APC</a> will provide significant performance increases if used correctly. There are plenty of guides for installing APC on <a href="https://www.google.com/search?q=Install+Alternative+PHP+Cache&amp;aq=f&amp;oq=Install+Alternative+PHP+Cache&amp;aqs=chrome.0.57j0l3j62l2.1033&amp;sugexp=chrome,mod=6&amp;sourceid=chrome&amp;ie=UTF-8#hl=en&amp;tbo=d&amp;sclient=psy-ab&amp;q=Install+APC+for+PHP&amp;oq=Install+APC+for+PHP&amp;gs_l=serp.3..0l3j0i30.11068.14252.0.14581.16.11.5.0.0.0.200.1813.0j10j1.11.0.les%3Bepsugrpq1high.1.0.0...1.1.cOdurfjGwd0&amp;pbx=1&amp;bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&amp;fp=1ad8c242e1bf948a&amp;bpcl=39967673&amp;biw=1436&amp;bih=783">Google</a>.</p>
+
+<h4>Install W3 Total Cache (W3TC)</h4>
+
+<p><a href="http://wordpress.org/extend/plugins/w3-total-cache/">W3TC</a> is the easiest way to take full advantage of APC. W3TC has a wide range of features, but if you build your theme correctly,</p>
+
+<h5>W3 Total Cache Tips</h5>
+
+<ul>
+<li>Manually combine and minify your CSS/JS files. Relying on W3 Total Cache for this process will require extra CPU cycles.</li>
+<li>W3TC offers the option to connect to content delivery networks (CDNs). CDNs are great, but if you keep your site small, they become unnecessary. If your site is getting serious traffic or contains a large amount of images or video, a CDN may make sense, but for the rest of you, save your time and money.</li>
+</ul>
+

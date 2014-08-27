@@ -1,0 +1,21 @@
+<p><a name="using-mhc-theme-modification"></a></p>
+
+<h3>Theme Modification</h3>
+
+<p>The mhc theme was always intended to be built upon. All CSS and Javascript are compiled from pre-processor languages (<a href="http://sass-lang.com/">SCSS</a> &amp; <a href="http://coffeescript.org/">CoffeeScript</a>). For those with less experience using pre-processor languages (especially how to compile them through the command line), I highly suggest using <a href="http://incident57.com/codekit/">CodeKit</a> for managing your mhc project. It is also highly suggested that any significant modifications are built out as a <a href="http://codex.wordpress.org/Child_Themes">child theme</a>.</p>
+
+<h4>Compass</h4>
+
+<p>mhc uses <a href="http://compass-style.org/">Compass</a> for SCSS compilation and takes advantage of its mixins and functions. <a href="http://compass-style.org/install/">Installing Compass</a> is necessary to successfully compile the theme&rsquo;s SCSS, but it&rsquo;s quite easy. The theme includes the Compass config file to make life a little easier.</p>
+
+<h4>SCSS Structure</h4>
+
+<p>The styles for mhc are broken up by subject matter. The <em>style.scss</em> file is the only file you should compile. It takes all the SCSS files and builds it into the theme&rsquo;s <em>style.css</em>. All colors, typefaces, font sizes and other visual attributes can be altered in the <em>variables.scss</em> file. Site-wide styles can be found in the <em>global.scss</em> file. All template-specific styles are found in the SCSS file with its matching name.</p>
+
+<h4>Foundation-based Grid</h4>
+
+<p>mhc uses a pared-down version of <a href="foundation.zurb.com">Foundation v2</a> for its grid system. The Foundation framework was modified to remove unneeded styles and features. All Foundation code is found in <em>stylesheets/scss/grid.scss</em>.</p>
+
+<h4>CoffeeScript</h4>
+
+<p>mhc does not depend on Javascript, but it does include some small Javascript components if you need them. All Javascript is compiled from CoffeeScript files which can be found in <em>javascripts/coffeescript</em></p>
