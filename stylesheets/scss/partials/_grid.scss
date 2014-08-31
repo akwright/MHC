@@ -237,8 +237,12 @@
 			min-width: 0; margin-left: 0; margin-right: 0;
 		}
 		body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%;  padding-left: 0; padding-right: 0; }
+        .page {
+          .content-primary,
+          .sidebar { padding: 1.5em 1em; }
+        }
 		.row { width: 100%; }
-		.row .row .column, .row .row .columns { padding: 0; }
+		.row .row .column, .row .row .columns { }
 		.column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
 		.column:last-child, .columns:last-child { margin-right: 0; float: none; }
 		[class*="column"] + [class*="column"]:last-child { float: none; }

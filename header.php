@@ -34,21 +34,26 @@
 	<!--[if lt IE 9]>
 		<div class="chromeframe">Your browser is out of date. Please <a href="http://browsehappy.com/">upgrade your browser </a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>.</div>
 	<![endif]-->
-
-  <header class="page-header container row">
-    <h1 class="site-logo">
-      <a href="<?php echo home_url(); ?>">
-        <img src="<?php bloginfo('template_url') ?>/images/mhc-logo.jpg" alt="<?php bloginfo( 'name' ); ?>"></a>
-    </h1>
-
-    <nav class="site-nav" role="navigation">
-      <?php if ( !dynamic_sidebar( 'Navigation' ) ) : ?>
-      <?php wp_nav_menu( array( 'theme_location' => 'mhc_primary_navigation', 'container' => false ) ); ?>
-      <?php endif; ?>
-    </nav>
-  </header>
-
-  <section class="featured-image row">
+  <div class="site-wrapper">
+    
+    <header id="page-header" class="page-header container row">
+      <h1 class="site-logo">
+        <a href="<?php echo home_url(); ?>">
+          <?php if (is_front_page()) : ?>
+          <img src="<?php bloginfo('template_url') ?>/images/mhc-logo_white.png" alt="<?php bloginfo( 'name' ); ?>">
+          <?php else : ?>
+          <img src="<?php bloginfo('template_url') ?>/images/mhc-logo.jpg" alt="<?php bloginfo( 'name' ); ?>">
+          <?php endif; ?>
+        </a>
+      </h1>
+      
+      <a id="menu-trigger" class="menu-trigger">MENU</a>
+      <nav class="site-nav" role="navigation">
+        <?php if ( !dynamic_sidebar( 'Navigation' ) ) : ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'mhc_primary_navigation', 'container' => false ) ); ?>
+        <?php endif; ?>
+      </nav>
+    </header>
     <?php
       $header_image = get_header_image();
       if ( $header_image ) :
@@ -57,12 +62,15 @@
         } else {
           $header_image_width = HEADER_IMAGE_WIDTH;
         }
-    ?>
-      <?php
+
         if ( is_singular() && has_post_thumbnail( $post->ID ) &&
-      ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( $header_image_width, $header_image_width ) ) ) &&
-      $image[1] >= $header_image_width ) :
-          echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+           ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 
+             array( $header_image_width, $header_image_width ) ) ) &&
+             $image[1] >= $header_image_width ) :
+          $url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+          ?>
+    <section id="featured-image" class="featured-image row" style="background: url('<?php echo $url; ?>') no-repeat center;">
+        <?php
         else :
           if ( function_exists( 'get_custom_header' ) ) {
             $header_image_width  = get_custom_header()->width;
@@ -71,9 +79,16 @@
             $header_image_width  = HEADER_IMAGE_WIDTH;
             $header_image_height = HEADER_IMAGE_HEIGHT;
           }
-      ?>
-      <img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+        ?>
+    <section id="featured-image" class="featured-image row" style="background: url('<?php header_image(); ?>') no-repeat center;">
       <?php endif; ?>
-      <h2>Bringing Health To Life</h2>
     <?php endif; ?>
-  </section>
+      
+      <?php if (is_front_page()): ?>
+      <h2>Bringing Health To Life</h2>
+      <span>Scroll</span>
+      <?php else: ?>
+      <h2><?php the_title(); ?></h2>
+      <?php endif; ?>
+      
+    </section>

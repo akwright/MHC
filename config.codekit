@@ -513,6 +513,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/mhc-logo_white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5726,
+		"inputAbbreviatedPath": "\/images\/mhc-logo_white.png",
+		"outputAbbreviatedPath": "\/images\/mhc-logo_white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/src\/arrow-left.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -611,6 +622,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/javascripts\/mhc.js",
 		"outputAbbreviatedPath": "\/javascripts\/min\/mhc-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/javascripts\/min\/mhc-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascripts\/min\/mhc-min.js",
+		"outputAbbreviatedPath": "\/javascripts\/min\/min\/mhc-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -735,6 +757,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/partials\/posts\/post-archive.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/posts\/post-archive.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/partials\/posts\/post-medium.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -831,6 +862,18 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -1051,15 +1094,6 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
-		},
-	"\/stylesheets\/scss\/partials\/_archive.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/scss\/partials\/_archive.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/stylesheets\/scss\/partials\/_archive.scss": {
 		"createSourceMap": 0,
@@ -1348,15 +1382,6 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
-		},
-	"\/stylesheets\/scss\/partials\/_variables.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/stylesheets\/scss\/partials\/_variables.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/stylesheets\/scss\/partials\/_variables.scss": {
 		"createSourceMap": 0,

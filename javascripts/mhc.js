@@ -1,3 +1,11 @@
+/*helper functions
+*/
+
+Element.prototype.hasClass = function(className) {
+  return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+};
+
+
 (function() {
   var image, images, loadDeferredImage, _i, _len;
 
@@ -21,6 +29,55 @@
 
 /*global
 */
+
+(function() {
+  
+  var header = document.getElementById('page-header'),
+      body   = document.getElementsByTagName('body')[0],
+  mhc = {
+    
+    init: function() {
+      //this.featuredImage();
+      this.scrollHeader();
+    },
+    
+    featuredImage: function() {
+      var featured = document.getElementById('featured-image'),
+          content  = document.getElementById('content');
+      
+      
+      window.addEventListener('resize', function() {
+        setHeight((window.innerWidth >= 930) ? header.clientHeight : 81);
+      });
+      
+      function setHeight(offset) {
+        content.setAttribute("style", "margin-top:" + 
+                             ( (body.hasClass('home')) ? (featured.clientHeight - 74) :
+                               (featured.clientHeight + offset) ) + "px");
+      }
+      setHeight(header.clientHeight);
+    },
+    
+    scrollHeader: function() {
+      
+      var num = 300;
+      
+      if (body.hasClass('home')) {
+        window.onscroll = function() {
+          if (window.pageYOffset > num) {
+            body.classList.remove('no-bg');
+          } else {
+            body.classList.add('no-bg');
+          }
+        };
+      }
+    }
+    
+  };
+  
+  mhc.init();
+  
+})();
 
 
 (function() {

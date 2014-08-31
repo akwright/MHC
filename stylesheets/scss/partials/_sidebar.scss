@@ -2,6 +2,7 @@
 	@extend .column;
 	width: $three-columns;
 	padding-top: $row-height*3;
+    padding-right: 1.5em;
 	
 	.widget {
 		margin-right:0;
@@ -16,10 +17,5 @@
   margin: 0; padding: 0;
   list-style: none;
   
-  li { }
-}
-
-.products {
-  //main { @extend .push-three; }
-  //.sidebar { @extend .pull-nine; }
+ 
 }

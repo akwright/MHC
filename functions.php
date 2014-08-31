@@ -63,7 +63,7 @@ if ( mhc_get_option( 'remove_wordpress_version' ) ){
 
 if ( ! is_admin() ) {
 	add_action( 'init', 'mhc_enqueue_styles' );
-    //add_action( 'init', 'mhc_load_gfonts' );
+    add_action( 'wp_enqueue_scripts', 'mhc_enqueue_scripts' );
 }
 if ( is_admin() ) {
 	add_action( 'init', 'mhc_admin_assets' );
@@ -171,7 +171,7 @@ function mhc_widgets() {
 		array(
 			'name'      		=> 'Footer',
 			'id'     	 			=> 'widget-footer',
-			'before_widget' => '<div id="%1$s" class="widget %2$s six columns">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
@@ -436,6 +436,13 @@ if ( ! function_exists( 'mhc_enqueue_styles' ) ) {
 		wp_enqueue_style( 'mhc_stylesheet' );
 		wp_enqueue_style( 'mhc_stylesheet_ie' );
 	}
+}
+
+if ( ! function_exists( 'mhc_enqueue_scripts' ) ) {
+    function mhc_enqueue_scripts() {
+        wp_register_script( 'mhc_scripts', get_stylesheet_directory_uri() . '/javascripts/mhc.js', false, '1.0', true );
+        wp_enqueue_script( 'mhc_scripts' );
+    }
 }
 
 

@@ -19,7 +19,7 @@
 				</section>
 			</article>
 			<?php endwhile; endif; ?>
-			<?php comments_template(); ?>
+			<?php //comments_template(); ?>
 		</main>
 		<?php get_sidebar(); ?>
 	</div>
