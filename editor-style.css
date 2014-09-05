@@ -1200,18 +1200,18 @@ dd {
 }
 
 #content {
-  margin-top: 371px;
+  margin-top: 480px;
   position: relative;
   background: white;
 }
-@media screen and (min-width: 360px) {
-  #content {
-    margin-top: 382px;
-  }
-}
 @media screen and (min-width: 600px) {
   #content {
-    margin-top: 482px;
+    margin-top: 780px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #content {
+    margin-top: 760px;
   }
 }
 

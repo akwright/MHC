@@ -1,49 +1,11 @@
 .home {
   .page-header {
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
     -webkit-transition: background .3s;
             transition: background .3s;
   }
   
-  .site-logo {
-    -webkit-transform: translate(0px, 0px);
-       -moz-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  .site-nav {
-    -webkit-transform: translate(0px, 0px);
-       -moz-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  
   #content {
     background: transparent;
-    margin-top: 480px;
-    
-    @media screen and (min-width: 600px) { margin-top: 780px; }
-  }
-  
-  .menu-item {
-    &.current-menu-item {
-      a {
-        color: $color-accent-alt;
-        text-shadow: 0 0 4px darken($color-accent-alt, 25%);
-        &:hover { color: $color-accent-alt; }
-      }
-    }
-    a {
-      color: darken($color-light, 15%);
-
-      &:hover { color: $color-light; }
-    }
-  }
-  
-  .featured-image {
-    top: 0; height: 500px;
-    
-    @media screen and (min-width: 600px) { height: 800px; }
   }
 
   .content-primary {
@@ -55,7 +17,7 @@
   
   .page-footer {
     padding: 4em 0 25px;
-    margin-top: -1.8em;
+    margin-top: -2em;
     position: relative;
     z-index: 1;
   }
@@ -112,19 +74,5 @@
       &:nth-child(3n+1) { margin-left: 0; clear: left; }
       &:nth-child(4) { margin-left: 16.65%; }
     }
-  }
-}
-
-.no-bg {
-  .page-header { background: none; }
-  .site-logo {
-    -webkit-transform: translate(20px, 20px);
-    -moz-transform: translate(20px, 20px);
-    transform: translate(20px, 20px);
-  }
-  .site-nav {
-    -webkit-transform: translate(-20px, 20px);
-    -moz-transform: translate(-20px, 20px);
-    transform: translate(-20px, 20px);
   }
 }

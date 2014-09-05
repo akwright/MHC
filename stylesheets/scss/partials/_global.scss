@@ -140,12 +140,12 @@ dd {
 }
 
 #content {
-  margin-top: 371px;
+  margin-top: 480px;
   position: relative;
   background: white;
-  
-  @media screen and (min-width: 360px) { margin-top: 382px; }
-  @media screen and (min-width: 600px) { margin-top: 482px; }
+
+  @media screen and (min-width: 600px) { margin-top: 780px; }
+  @media screen and (min-width: 1000px) { margin-top: 760px; }
 }
 
 .two-columns#content { background: lighten($color-light, 1%); }

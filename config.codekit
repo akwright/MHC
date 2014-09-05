@@ -524,6 +524,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/mhc-logo_whiteb.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6566,
+		"inputAbbreviatedPath": "\/images\/mhc-logo_whiteb.png",
+		"outputAbbreviatedPath": "\/images\/mhc-logo_whiteb.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/mhc-logo_whitec.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6558,
+		"inputAbbreviatedPath": "\/images\/mhc-logo_whitec.png",
+		"outputAbbreviatedPath": "\/images\/mhc-logo_whitec.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/src\/arrow-left.png": {
 		"fileType": 32768,
 		"ignore": 0,

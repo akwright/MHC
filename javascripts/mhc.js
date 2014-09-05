@@ -39,6 +39,7 @@ Element.prototype.hasClass = function(className) {
     init: function() {
       //this.featuredImage();
       this.scrollHeader();
+      this.scrollHeaderText();
     },
     
     featuredImage: function() {
@@ -62,7 +63,7 @@ Element.prototype.hasClass = function(className) {
       
       var num = 300;
       
-      if (body.hasClass('home')) {
+      //if (body.hasClass('home')) {
         window.onscroll = function() {
           if (window.pageYOffset > num) {
             body.classList.remove('no-bg');
@@ -70,7 +71,21 @@ Element.prototype.hasClass = function(className) {
             body.classList.add('no-bg');
           }
         };
-      }
+      //}
+    },
+    
+    scrollHeaderText: function() {
+      var featured   = document.getElementById('featured-image'),
+          f_text     = featured.getElementsByTagName('h3')[0],
+          f_text_top = f_text.style.top;
+      console.log(f_text);
+      console.log(f_text_top);
+      
+      window.onscroll = function() {
+        if (window.pageYOffset <= featured.offsetHeight) {
+          //f_text.setAttribute("style", "top: " + f_text_top - ( (window.pageYOffset / 2) * 0.1) + "%");
+        }
+      };
     }
     
   };
