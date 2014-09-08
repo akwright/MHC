@@ -76,7 +76,7 @@
 	.pull-ten 		{ right: 87%; }
 
 
-    @media only screen {
+    @media #{$small-up} {
       .small-1      { width: 4.3%; }
       .small-2      { width: 13%; }
       .small-3      { width: 21.679%; }
@@ -111,7 +111,7 @@
       .columns.small-uncentered.opposite { float: right; }
     }
 
-    @media only screen and (min-width: 40.063em) {
+    @media #{$medium-up} {
       .medium-1      { width: 4.3%; }
       .medium-2      { width: 13%; }
       .medium-3      { width: 21.679%; }
@@ -146,7 +146,7 @@
       .columns.medium-uncentered.opposite { float: right; }
     }
 
-    @media only screen and (min-width: 64.063em) {
+    @media #{$large-up} {
       .large-1      { width: 4.3%; }
       .large-2      { width: 13%; }
       .large-3      { width: 21.679%; }

@@ -83,13 +83,19 @@
     <section id="featured-image" class="featured-image row" style="background: url('<?php header_image(); ?>') no-repeat center; background-size: cover;">
       <?php endif; ?>
     <?php endif; ?>
-      <?php
-        $featured_text = get_post_meta( get_the_ID(), '_mhc_featured_text', true );
-        if ( ! empty( $featured_text ) ) :
-          echo  $featured_text;
-        else :
-      ?>
-      <h2><?php the_title(); ?></h2>
-      <?php endif; ?>
-      
+      <div class="js-featured_text">
+        <?php
+          $featured_text = get_post_meta( get_the_ID(), '_mhc_featured_text', true );
+          if ( ! empty( $featured_text ) ) {
+            echo  $featured_text;
+          } else if ( is_archive() ) {
+            $post_type_data = get_post_type_object( $post_type );
+            $post_type_slug = $post_type_data->rewrite['slug'];
+            echo "<h2>".$post_type_slug."</h2>";
+          } else {
+        ?>
+        <h2><?php the_title(); ?></h2>
+        <?php } ?>
+        <span>Scroll</span>
+      </div>
     </section>

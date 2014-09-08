@@ -1172,26 +1172,12 @@ dd {
 }
 
 /*Pagination links*/
-.pagination {
-  font-size: font-size-small;
-}
-.pagination a {
-  margin-right: 40px;
-  width: 110px;
-}
 .pagination.small {
   font: 0.938em "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
 .pagination.small .title {
   font-weight: 700;
   margin-right: 15px;
-}
-.pagination.small a {
-  margin: 0;
-  border: 1px #f0f0f0 solid;
-  color: #555555;
-  padding: 4px 6px;
-  border-radius: 2px;
 }
 
 .site-wrapper {
@@ -1202,7 +1188,7 @@ dd {
 #content {
   margin-top: 480px;
   position: relative;
-  background: white;
+  background: #f0f0f0;
 }
 @media screen and (min-width: 600px) {
   #content {
@@ -1226,6 +1212,12 @@ dd {
 
 .two-columns .content-primary {
   background: white;
+}
+
+.single .content-primary {
+  width: 100%;
+  padding-bottom: 0;
+  float: none;
 }
 
 .page__section {

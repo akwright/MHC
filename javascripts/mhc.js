@@ -39,7 +39,7 @@ Element.prototype.hasClass = function(className) {
     init: function() {
       //this.featuredImage();
       this.scrollHeader();
-      this.scrollHeaderText();
+      //this.loadCustomPosts();
     },
     
     featuredImage: function() {
@@ -61,7 +61,9 @@ Element.prototype.hasClass = function(className) {
     
     scrollHeader: function() {
       
-      var num = 300;
+      var num = 300,
+          featured   = document.getElementById('featured-image'),
+          f_text     = featured.getElementsByClassName('js-featured_text')[0];
       
       //if (body.hasClass('home')) {
         window.onscroll = function() {
@@ -70,22 +72,11 @@ Element.prototype.hasClass = function(className) {
           } else {
             body.classList.add('no-bg');
           }
+          if (window.pageYOffset <= featured.offsetHeight) {
+            f_text.style.top = 50 - ( (window.pageYOffset / 7) * 0.1) + "%";
+          }
         };
       //}
-    },
-    
-    scrollHeaderText: function() {
-      var featured   = document.getElementById('featured-image'),
-          f_text     = featured.getElementsByTagName('h3')[0],
-          f_text_top = f_text.style.top;
-      console.log(f_text);
-      console.log(f_text_top);
-      
-      window.onscroll = function() {
-        if (window.pageYOffset <= featured.offsetHeight) {
-          //f_text.setAttribute("style", "top: " + f_text_top - ( (window.pageYOffset / 2) * 0.1) + "%");
-        }
-      };
     }
     
   };
@@ -93,6 +84,57 @@ Element.prototype.hasClass = function(className) {
   mhc.init();
   
 })();
+
+function ajaxRequest() {
+  var activexmodes=["Msxml2.XMLHTTP", "Microsoft.XMLHTTP"];
+  if (window.ActiveXObject) {
+    for (var i=0; i<activexmodes.length; i++){
+      try { return new ActiveXObject(activexmodes[i]); }
+      catch(e){
+        //suppress error
+      }
+    }
+  }
+  else if (window.XMLHttpRequest) { return new XMLHttpRequest(); }
+  else { return false; }
+}
+
+
+function loadCustomPosts(ele, termID) {
+  var base = window.location.origin + '/Freelance/MHC/wordpress/',
+      ajaxurl = base + 'wp-admin/admin-ajax.php',
+      my_request = new ajaxRequest(),
+      parameters = '',
+      tax_name = document.getElementById('js-taxName');
+  
+  var links = document.getElementsByClassName('js-ajax');
+  for (var i = 0, link; link = links[i]; i++) {
+    link.classList.remove('active');
+  }
+  
+  if ( typeof(termID !== 'undefined') && termID !== undefined ) {
+    parameters = 'action=load-filter2&term=' + termID;
+  } else {
+    parameters = 'action=load-filter2';
+  }
+  
+  ele.classList.add('active');
+  tax_name.innerHTML = ele.getAttribute('data-name');
+  
+  my_request.onreadystatechange = function() {
+    if ( my_request.readyState === 4 ) {
+      if ( my_request.status === 200 || window.location.href.indexOf('http') === -1 ) {
+        document.getElementsByClassName('posts')[0].innerHTML = my_request.responseText;
+      } else {
+        alert('There was an error with the request.');
+      }
+    }
+  };
+  
+  my_request.open('POST', ajaxurl, true);
+  my_request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  my_request.send(parameters);
+}
 
 
 (function() {

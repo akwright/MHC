@@ -1,25 +1,35 @@
 /*Buttons*/		
 .button, input[type=submit] {
-	display: inline-block;
-	background: $color-light;
-	color: $color-midtone;
-	padding: 8px 10px;
+	display: block;
+    margin:$row-height 0;
+    padding: .8em 1.5em;
+    width: 100%;
+	
+    background: $color-dark;
+	color: $color-highlight;
+    border: 1px solid rgba(0,0,0,0.8);
 	border-radius: 2px;
-	font: #{$font-weight-bold} #{$font-size-small} #{$typeface-secondary};
+	font: 600 #{$font-size-xx-small} #{$typeface-secondary};
 	text-align: center;
-	border: 1px solid rgba(18, 7, 6, 0.2);
+  
 	&:hover {
-		background: $color-midtone-light;
+		background: $color-accent-alt;
 		color: $color-highlight;
-		border: 1px solid rgba(18, 7, 6, 0.5);
+		border: 1px solid rgba(0,0,0,0.3);
 	}
+    &:active {
+      -webkit-transform: translateY(2px);
+         -moz-transform: translateY(2px);
+              transform: translateY(2px);
+    }
 }
 
 .button.alt {
-	background: $color-accent;
+  background: $color-accent;
+  border: 1px solid rgba(0,0,0,0.3);
 	color: $color-highlight; 
 	&:hover {
-		background: $color-accent-alt;
+		background: lighten($color-accent, 10%);
 		color: $color-highlight;
 	}
 }
@@ -29,12 +39,11 @@
 	padding: 4px 8px;
 }
 
-/*MOBILE*/
-@media only screen and  (max-width: 767px) {
+/*MOBILE UP*/
+@media #{$small-up} {
 	
 	button, .button, input[type=submit] {
-		display:block;
-		width:100% !important;
-		margin:$row-height 0;
+		display: inline-block;
+		width:auto;
 	}
 }

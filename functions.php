@@ -45,7 +45,7 @@ define( 'HEADER_IMAGE', '%s/images/default_header4.jpg' );
 //define( 'HEADER_IMAGE_WIDTH', 980 );
 //define( 'HEADER_IMAGE_HEIGHT', 225 );
 define( 'HEADER_IMAGE_WIDTH', 1400 );
-define( 'HEADER_IMAGE_HEIGHT', 600 );
+define( 'HEADER_IMAGE_HEIGHT', 800 );
 
 add_filter( 'wp_list_categories', 'mhc_remove_category_list_rel' );
 add_filter( 'the_category', 'mhc_remove_category_list_rel' );

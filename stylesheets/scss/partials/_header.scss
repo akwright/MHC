@@ -11,6 +11,9 @@
      -moz-box-shadow: 0 1px 3px rgba(0,0,0,.3);
           box-shadow: 0 1px 3px rgba(0,0,0,.3);
   
+  -webkit-transition: background .3s;
+          transition: background .3s;
+  
   @media screen and (min-width: 1400px) {
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
@@ -36,7 +39,8 @@
 }
 
 .site-logo,
-.site-nav {
+.site-nav,
+.menu-trigger {
   -webkit-transition: -webkit-transform .3s;
           transition: transform .3s;
 }
@@ -51,6 +55,10 @@
   
   color: $color-light;
   cursor: pointer;
+  
+  -webkit-transform: translate(-10px, 0px);
+     -moz-transform: translate(-10px, 0px);
+          transform: translate(-10px, 0px);
   
   &:before {
     content: "";
@@ -136,7 +144,7 @@
     padding:7px 30px 7px 10px;
     display: block;
     color: darken($color-light, 15%);
-    font: #{$font-size-small} #{$typeface-secondary};
+    font: 600 #{$font-size-small} #{$typeface-secondary};
     position: relative;
     
     -webkit-transition: color 0.3s, text-shadow 0.3s;
@@ -162,7 +170,7 @@
        -moz-transform: translate(30px, 20px);
             transform: translate(30px, 20px);
   }
-  .site-nav {
+  .site-nav, .menu-trigger {
     -webkit-transform: translate(-30px, 20px);
        -moz-transform: translate(-30px, 20px);
             transform: translate(-30px, 20px);
@@ -179,16 +187,18 @@
   
   img { display: block; }
   
+  > div {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    top: 50%; left: 0; right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
   h2,
   h3,
   span {
-    margin: 0;
-    position: absolute;
-    width: 100%;
-    left: 0; right: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    
     color: white;
     font: 3em $typeface-secondary;
     font-weight: 100;
@@ -196,14 +206,11 @@
   }
   
   h2 {
-    top: 50%;
-    
     @media screen and (min-width: 400px) { font-size: 4em; }
     @media screen and (min-width: 600px) { font-size: 6em; }
   }
   
   h3 {
-    top: 50%;
     font: 1.5em $typeface-heading;
     
     em {
@@ -213,7 +220,8 @@
   }
   
   span {
-    top: 65%;
+    display: block;
+    position: relative;
     color: rgba(255,255,255,.7);
     font-size: 1em;
     font-weight: 400;

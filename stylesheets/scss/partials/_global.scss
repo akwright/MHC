@@ -112,23 +112,11 @@ dd {
 
 /*Pagination links*/
 .pagination {
-	font-size: font-size-small;
-	a {
-		margin-right: $gutter-width;
-		@include column-based-width(2, -20); 
-	} 
 	&.small {
 		font: $font-size-small $typeface-secondary;
 		.title {
 			font-weight:$font-weight-bold;
 			margin-right:15px;
-		}
-		a {
-			margin:0;
-			border: 1px $color-light solid;
-			color: $color-midtone;
-			padding: 4px 6px;
-			border-radius:2px;
 		}
 	}
 }
@@ -142,7 +130,7 @@ dd {
 #content {
   margin-top: 480px;
   position: relative;
-  background: white;
+  background: $color-light;
 
   @media screen and (min-width: 600px) { margin-top: 780px; }
   @media screen and (min-width: 1000px) { margin-top: 760px; }
@@ -156,6 +144,11 @@ dd {
     padding: $row-height*3 1.5em;
 }
 .two-columns .content-primary { background: white; }
+.single .content-primary {
+  width: $twelve-columns;
+  padding-bottom: 0;
+  float: none;
+}
 
 .page__section {
   padding: 3em 2em;

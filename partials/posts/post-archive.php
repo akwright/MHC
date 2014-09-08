@@ -1,15 +1,23 @@
-<article itemscope itemtype="http://schema.org/BlogPosting" <?php post_class( 'leftaside' ); ?>>
+<article itemscope itemtype="http://schema.org/BlogPosting" <?php post_class( 'small-12 medium-6 large-4 columns' ); ?>>
+  <?php
+    global $post;
+    $terms = get_the_terms( $post->ID, 'product-types' );
+    foreach ( $terms as $term ) {
+      echo '<span class="post-type '.$term->slug.'">'.$term->name.'</span>';
+    }
+  ?>
   <header class="post-header">
-    <?php if (is_archive()): ?>
-    <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+    <?php if ( is_archive() || $_POST['cpt'] ): ?>
+    <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
     <?php else: ?>
     <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
     <?php endif; ?>
   </header>
-  <div class="row">
-    <section class="post-content">
+  <section class="post-content">
+    <a href="<?php the_permalink() ?>">
       <?php the_post_thumbnail( 'medium-thumbnail' ); ?>
-      <?php the_excerpt( __( 'Read On&hellip;', 'mhc_theme' ) ); ?>
-    </section>
-  </div>
+    </a>
+    <?php the_excerpt( 'Read On&hellip;' ); ?>
+    <a class="button" href="<?php the_permalink() ?>">View Product</a>
+  </section>
 </article>

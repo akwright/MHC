@@ -1,5 +1,61 @@
 .products {
+  menu {
+    padding-left: 0;
+    a {
+      margin-right: 2em;
+      padding: .5em 0;
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: '/';
+        position: absolute;
+        color: rgba($color-accent, .4);
+        right: -1.25em;
+      }
+      &:last-child { margin-right: 0; }
+      &:last-child:after { display: none; }
+    }
+    .active {
+      border-bottom: 1px solid $color-accent-alt;
+      color: $color-accent-alt;
+    }
+  }
   .content-primary {
     width: $twelve-columns;
+    padding-bottom: 0;
+    float: none;
   }
+  article.columns {
+    margin-bottom: $row-height*2;
+    background: #fff;
+    border-radius: 3px;
+    
+    &:last-child { float: left; }
+    @media #{$medium-only} {
+      &:nth-child(odd) { clear: left; margin-left: 0; }
+    }
+    @media #{$large-up} {
+      &:nth-child(3n+1) { clear: left; margin-left: 0; }
+    }
+  }
+  .post-type {
+    display: block;
+    margin-bottom: $row-height;
+    padding: .1em 0 .1em .7em;
+    color: #fff;
+    font-size: $font-size-x-small;
+    text-transform: uppercase;
+    
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+    &.specialty-beds      { background: $color-accent-blue; }
+    &.pressure-prevention { background: $color-accent-orange; }
+    &.advanced-healing    { background: $color-accent-green; }
+  }
+  .post-header,
+  .post-content {
+    padding: 0 1em;
+  }
+  .post-content { padding-bottom: 1em; }
 }
