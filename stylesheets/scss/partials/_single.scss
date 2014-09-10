@@ -61,6 +61,20 @@
 	} 
 }
 
+body[class~='single'] .featured-image {
+  height: 350px;
+  background-position: top !important;
+  
+  div { display: none; }
+}
+body[class~='single'] #content { margin-top: 350px; }
+
+.post-image {
+  float: left;
+  margin-right: 2em;
+}
+.post-image + p { margin-top: 0; }
+
 
 
 #post-tweet {

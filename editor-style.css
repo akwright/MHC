@@ -1024,7 +1024,7 @@ img, video {
 }
 html .mceContentBody {
   max-width: 535px;
-  font: 1em/1.6 "Source Sans Pro", Arial, sans-serif;
+  font: 1em/1.6 Source Sans Pro, Arial, sans-serif;
   margin: 10px;
 }
 
@@ -1063,13 +1063,13 @@ a:hover {
 
 /* Titles */
 .title, .widget-title {
-  font: 400 1em/1.3 "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font: 400 1em/1.3 Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, Sans-Serif;
 }
 .title a, .widget-title a {
-  color: #555555;
+  color: #555;
 }
 .title a:hover, .widget-title a:hover {
-  color: #333333;
+  color: #333;
 }
 
 .title.large {
@@ -1077,7 +1077,7 @@ a:hover {
 }
 
 .title.small {
-  font: 700 0.938em/1.25 "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font: 700 0.938em/1.25 Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, Sans-Serif;
 }
 
 /*Tables*/

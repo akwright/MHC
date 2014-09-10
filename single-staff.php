@@ -18,7 +18,7 @@
         <?php endif; ?>
         <div id='content-main' class='row'>
           <section class='post-content clearfix'>
-            <?php the_post_thumbnail( 'large' ); ?>
+            <?php the_post_thumbnail( 'large', array( 'class' => 'post-image' ) ); ?>
             <?php the_content(); ?>
             <?php wp_link_pages( 'before=<div class="pagination small"><span class="title">Pages:</span>&after=</div>' ); ?>
           </section>
@@ -27,14 +27,14 @@
               <?php
 $prevPost = get_previous_post();
 $prevThumbnail = get_the_post_thumbnail($prevPost->ID, array(110,110) );
-previous_post_link( '%link', '<span class="icon-wrap">←</span><div><span>Previous Post</span><h3>%title</h3>'.$prevThumbnail.'</div>' );
+previous_post_link( '%link', '<span class="icon-wrap">←&nbsp; Prev</span><div><span>Previous Staff Member</span><h3>%title</h3>'.$prevThumbnail.'</div>' );
               ?>
             </div>
             <div id="next-post" class="navigate nav-right clearfix">
               <?php
 $nextPost = get_next_post();
 $nextThumbnail = get_the_post_thumbnail($nextPost->ID, array(110,110) );
-next_post_link( '%link', '<span class="icon-wrap">→</span><div><span>Next Post</span><h3>%title</h3>'.$nextThumbnail.'</div>' ); ?>
+next_post_link( '%link', '<span class="icon-wrap">Next &nbsp;→</span><div><span>Next Staff Member</span><h3>%title</h3>'.$nextThumbnail.'</div>' ); ?>
               <?php next_image_link(); ?>
             </div>
             <?php if ( !dynamic_sidebar( 'Post Left Aside' ) ) : ?>

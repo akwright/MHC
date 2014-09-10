@@ -24,10 +24,18 @@
           </section>
           <div class='post-info'>
             <div id="prev-post" class="navigate nav-left clearfix">
-              <?php previous_post_link( '%link', '<span class="icon-wrap">←</span><div><span>Previous Product</span><h3>%title</h3></div>' ); ?>
+              <?php
+                $prevPost = get_previous_post();
+                $prevThumbnail = get_the_post_thumbnail($prevPost->ID, array(110,110) );
+                previous_post_link( '%link', '<span class="icon-wrap">←&nbsp; Prev</span><div><span>Previous Product</span><h3>%title</h3>'.$prevThumbnail.'</div>' );
+              ?>
             </div>
             <div id="next-post" class="navigate nav-right clearfix">
-              <?php next_post_link( '%link', '<span class="icon-wrap">→</span><div><span>Next Product</span><h3>%title</h3></div>' ); ?>
+              <?php
+                $nextPost = get_next_post();
+                $nextThumbnail = get_the_post_thumbnail($nextPost->ID, array(110,110) );
+                next_post_link( '%link', '<span class="icon-wrap">Next &nbsp;→</span><div><span>Next Product</span><h3>%title</h3>'.$nextThumbnail.'</div>' ); ?>
+              <?php next_image_link(); ?>
             </div>
             <?php if ( !dynamic_sidebar( 'Post Left Aside' ) ) : ?>
             <?php endif; ?>
