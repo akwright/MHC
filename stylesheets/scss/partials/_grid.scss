@@ -8,7 +8,7 @@
 	
 	-------------------------------------------------- */
 
-	.row { width: 100%; max-width: 1400px; /*min-width: 727px;*/ margin: 0 auto; }
+	.row { width: 100%; /*max-width: 1400px; /*min-width: 727px;*/ margin: 0 auto; }
 	/* To fix the grid into a certain size, set max-width to width */
 	.row .row { min-width: 0; }
 
@@ -179,6 +179,41 @@
 
       .column.large-uncentered.opposite,
       .columns.large-uncentered.opposite { float: right; }
+    }
+
+    @media #{$xlarge-up} {
+      .xlarge-1      { width: 4.3%; }
+      .xlarge-2      { width: 13%; }
+      .xlarge-3      { width: 21.679%; }
+      .xlarge-4      { width: 30.37%; }
+      .xlarge-5      { width: 39.1%; }
+      .xlarge-6      { width: 47.8%; }
+      .xlarge-7      { width: 56.5%; }
+      .xlarge-8      { width: 65.2%; }
+      .xlarge-9      { width: 73.9%; }
+      .xlarge-10     { width: 82.6%; }
+      .xlarge-11     { width: 91.3%; }
+      .xlarge-12     { width: 100%; }
+
+      .xlarge-reset-order {
+        margin-left: 0; margin-right: 0;
+        left: auto; right: auto;
+        float: left; }
+
+      .column.xlarge-centered,
+      .columns.xlarge-centered { margin-left: auto; margin-right: auto; float: none; }
+
+      .column.xlarge-uncentered,
+      .columns.xlarge-uncentered { margin-left: 0; margin-right: 0; float: left; }
+
+      .column.xlarge-centered:last-child,
+      .columns.xlarge-centered:last-child { float: none; }
+
+      .column.xlarge-uncentered:last-child,
+      .columns.xlarge-uncentered:last-child { float: left; }
+
+      .column.xlarge-uncentered.opposite,
+      .columns.xlarge-uncentered.opposite { float: right; }
     }
 
 

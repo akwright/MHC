@@ -121,19 +121,18 @@ dd {
 	}
 }
 
-.site-wrapper {
+.wrapper {
   @extend .row;
-  -webkit-box-shadow: 0 0 35px rgba(0,0,0,.3);
-          box-shadow: 0 0 35px rgba(0,0,0,.3);
+  max-width: 1200px;
 }
 
 #content {
-  margin-top: 480px;
+  margin-top: 380px;
   position: relative;
   background: $color-light;
 
-  @media screen and (min-width: 600px) { margin-top: 780px; }
-  @media screen and (min-width: 1000px) { margin-top: 760px; }
+  @media screen and (min-width: 600px) { margin-top: 660px; }
+  @media screen and (min-width: 1280px) { margin-top: 840px; }
 }
 
 .two-columns#content { background: lighten($color-light, 1%); }
@@ -160,6 +159,18 @@ dd {
   
   &.alternate { background-color: $color-light; }
   
+  &.blue,
+  &.blue.has-bgimage:before { background-color: $color-accent; }
+  
+  &.lightgray,
+  &.lightgray.has-bgimage:before { background-color: $color-light; }
+  
+  &.yellow,
+  &.yellow.has-bgimage:before { background-color: $color-accent-alt-light; }
+  
+  &.darkblue,
+  &.darkblue.has-bgimage:before { background-color: $color-accent-dark; }
+  
   &.skew3 {
     -webkit-transform: skewY(-3deg);
        -moz-transform: skewY(-3deg);
@@ -172,9 +183,77 @@ dd {
     }
   }
   
+  &.blue .button {
+    background: #fff;
+    color: $color-accent;
+    &:hover { background: rgba(255,255,255,.6); }
+  }
+  
+  &.lightgray .button {
+    color: $color-light;
+    &:hover { background: rgba($color-dark, .6); }
+  }
+  
+  &.yellow .button {
+    background: $color-accent-dark;
+    color: $color-accent-alt-light;
+    &:hover { background: rgba($color-accent-dark, .6); }
+  }
+  
+  &.darkblue .button {
+    background: $color-light;
+    color: $color-accent-dark;
+    &:hover { background: rgba($color-light, .6); }
+  }
+  
   @media screen and (min-width: 600px) { padding: 6em 2em; }
   
-  h2 { margin-bottom: 1.5em; }
+  &.has-bgimage:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    pointer-events: none;
+    opacity: .9;
+  }
+  
+  &.blue h6,
+  &.blue h2,
+  &.blue p,
+  &.darkblue h6,
+  &.darkblue h2,
+  &.darkblue p { color: #fff; }
+  
+  &.blue h2:after,
+  &.darkblue h2:after { background: #fff; }
+  
+  &.yellow h6,
+  &.yellow h2,
+  &.yellow p { color: $color-accent-dark; }
+
+  &.yellow h2:after { background: $color-accent-dark; }
+  
+  hgroup {
+    h6 {
+      font: normal 1em $typeface-body;
+      letter-spacing: 5px;
+      margin-bottom: 0;
+    }
+    h2 {
+      font: normal 4em $typeface-heading;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: .5em;
+      
+      &:after {
+        content: '';
+        width: 26px; height: 2px;
+        position: absolute;
+        bottom: -10px; left: 0;
+        background: inherit;
+      }
+    }
+  }
 }
 
 #content.page .post img { 

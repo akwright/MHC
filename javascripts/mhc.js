@@ -1,6 +1,3 @@
-/*helper functions
-*/
-
 Element.prototype.hasClass = function(className) {
   return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
@@ -27,8 +24,6 @@ Element.prototype.hasClass = function(className) {
 
 }).call(this);
 
-/*global
-*/
 
 (function() {
   
@@ -61,22 +56,14 @@ Element.prototype.hasClass = function(className) {
     
     scrollHeader: function() {
       
-      var num = 300,
-          featured   = document.getElementById('featured-image'),
+      var featured   = document.getElementById('featured-image'),
           f_text     = featured.getElementsByClassName('js-featured_text')[0];
       
-      //if (body.hasClass('home')) {
         window.onscroll = function() {
-          if (window.pageYOffset > num) {
-            body.classList.remove('no-bg');
-          } else {
-            body.classList.add('no-bg');
-          }
           if (window.pageYOffset <= featured.offsetHeight) {
             f_text.style.top = 50 - ( (window.pageYOffset / 7) * 0.1) + "%";
           }
         };
-      //}
     }
     
   };

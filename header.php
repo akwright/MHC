@@ -26,21 +26,19 @@
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
-    <?php if ( ! is_admin ) : ?>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Bitter">
-    <?php endif; ?>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Bitter|Dancing+Script">
 </head>
-<body id="page" <?php body_class('no-bg'); ?>>
+<body id="page" <?php body_class(); ?>>
 	<!--[if lt IE 9]>
 		<div class="chromeframe">Your browser is out of date. Please <a href="http://browsehappy.com/">upgrade your browser </a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>.</div>
 	<![endif]-->
-  <div class="site-wrapper">
     
-    <header id="page-header" class="page-header container row">
+  <header id="page-header" class="page-header row">
+    <div class="wrapper">
       <h1 class="site-logo">
         <a href="<?php echo home_url(); ?>">
           <?php //if (is_front_page()) : ?>
-          <img src="<?php bloginfo('template_url') ?>/images/mhc-logo_whitec.png" alt="<?php bloginfo( 'name' ); ?>">
+          <img src="<?php bloginfo('template_url') ?>/images/mhc-logob.png" alt="<?php bloginfo( 'name' ); ?>">
           <?php //else : ?>
           <!--<img src="<?php //bloginfo('template_url') ?>/images/mhc-logo.jpg" alt="<?php //bloginfo( 'name' ); ?>">-->
           <?php //endif; ?>
@@ -53,7 +51,8 @@
         <?php wp_nav_menu( array( 'theme_location' => 'mhc_primary_navigation', 'container' => false ) ); ?>
         <?php endif; ?>
       </nav>
-    </header>
+    </div>
+  </header>
     <?php
       $header_image = get_header_image();
       if ( $header_image ) :

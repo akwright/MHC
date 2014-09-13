@@ -11,7 +11,7 @@ img {
 }
 
 label {
-  font: 700 0.938em "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font: 700 0.938em Avenir Next, Avenir, Helvetica Neue, Helvetica, Arial, Sans-Serif;
 }
 
 #top_bar {
@@ -28,7 +28,7 @@ label {
 }
 
 #prev-post .arrow {
-  background: #555555 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAYAAADESFVDAAAAWElEQVR42qXSzQkAIAgF4EZolEZqhDZqpEZwBM8dovSUYD9YwuNdPgIlt5tWa6AA9wkgpXPfACeagaeAAGkFigDZACbKAoAC+5f+od7Oesh/iC+/QC/DPQAIxvkuqJQtLgAAAABJRU5ErkJggg==') no-repeat 16px 15px;
+  background: #555 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAYAAADESFVDAAAAWElEQVR42qXSzQkAIAgF4EZolEZqhDZqpEZwBM8dovSUYD9YwuNdPgIlt5tWa6AA9wkgpXPfACeagaeAAGkFigDZACbKAoAC+5f+od7Oesh/iC+/QC/DPQAIxvkuqJQtLgAAAABJRU5ErkJggg==') no-repeat 16px 15px;
 }
 
 .post-group {
