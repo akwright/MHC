@@ -3,14 +3,16 @@
     <a href="<?php the_permalink() ?>">
       <?php the_post_thumbnail( 'full' ); ?>
     </a>
-    <h3 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+    <h3 class="post-title staff-heading"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
     <?php
       $terms = get_the_terms( $post_id, 'staff-title' );
       $sep = '';
+      echo '<p class="staff-title">';
       foreach ( $terms as $term ) {
         echo $sep . $term->name;
         $sep = ', ';
       }
+      echo '</p>';
     ?>
   </section>
 </article>

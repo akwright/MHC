@@ -38,8 +38,7 @@
 }
 
 /*MOBILE UP*/
-@media #{$small-up} {
-	
+@media screen and (min-width: 400px) {
 	button, .button, input[type=submit] {
 		display: inline-block;
 		width:auto;

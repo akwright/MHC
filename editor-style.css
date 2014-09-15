@@ -1290,8 +1290,9 @@ dd {
 }
 
 .content-primary {
-  width: 73.9%;
+  width: 100%;
   padding: 45px 1.5em;
+  float: none;
 }
 
 .two-columns .content-primary {
@@ -1299,9 +1300,7 @@ dd {
 }
 
 .single .content-primary {
-  width: 100%;
   padding-bottom: 0;
-  float: none;
 }
 
 .page__section {
@@ -1337,6 +1336,12 @@ dd {
   -moz-transform: skewY(3deg);
   transform: skewY(3deg);
 }
+.page__section .button {
+  margin-top: 2em;
+}
+.page__section.has-bgimage {
+  background-position: center 20%;
+}
 .page__section.blue .button {
   background: #fff;
   color: #005596;
@@ -1363,6 +1368,11 @@ dd {
 }
 .page__section.darkblue .button:hover {
   background: rgba(240, 240, 240, 0.6);
+}
+@media screen and (min-width: 400px) {
+  .page__section {
+    padding: 4em 2em;
+  }
 }
 @media screen and (min-width: 600px) {
   .page__section {
@@ -1392,15 +1402,15 @@ dd {
   background: #1b2c38;
 }
 .page__section hgroup h6 {
-  font: normal 1em "Source Sans Pro", Arial, sans-serif;
+  font: normal 0.75em "Source Sans Pro", Arial, sans-serif;
   letter-spacing: 5px;
   margin-bottom: 0;
 }
 .page__section hgroup h2 {
-  font: normal 4em "Bitter", Georgia, serif;
+  font: normal 1.75em "Bitter", Georgia, serif;
   position: relative;
   margin-top: 0;
-  margin-bottom: .5em;
+  margin-bottom: 1.25em;
 }
 .page__section hgroup h2:after {
   content: '';
@@ -1409,7 +1419,28 @@ dd {
   position: absolute;
   bottom: -10px;
   left: 0;
-  background: inherit;
+  background: #333;
+}
+@media screen and (min-width: 400px) {
+  .page__section hgroup h6 {
+    font-size: 1em;
+  }
+  .page__section hgroup h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 600px) {
+  .page__section hgroup h2 {
+    font-size: 3.75em;
+    margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 800px) {
+  .page__section hgroup h2 {
+    font-size: 4em;
+    margin-bottom: .75em;
+  }
 }
 
 #content.page .post img {
