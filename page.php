@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <div id="content" class="page container">
 	<div class="row">
-		<main class="content-primary" role="main">
+		<main class="spacing small-12 medium-9 columns" role="main">
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
@@ -19,9 +19,8 @@
 				</section>
 			</article>
 			<?php endwhile; endif; ?>
-			<?php //comments_template(); ?>
 		</main>
-		<?php get_sidebar(); ?>
+    <?php get_template_part( 'partials/sidebars/sidebar', 'page' ); ?>
 	</div>
 </div>
 <?php get_footer(); ?>

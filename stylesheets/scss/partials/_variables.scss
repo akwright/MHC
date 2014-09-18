@@ -7,6 +7,8 @@ $color-off-black: #050000;
 
 $color-midtone-light: #998482;
 $color-accent-alt: #ffcf01;
+$color-accent-alt-light: #ffde51;
+$color-accent-dark: #1b2c38;
 
 $color-accent-orange: #be5a3b;
 $color-accent-blue: #275477;
@@ -14,6 +16,8 @@ $color-accent-green: #3d7d49;
 
 $typeface-heading: "Bitter", Georgia, serif;
 $typeface-body: "Source Sans Pro", Arial, sans-serif;
+//$typeface-script: "Great Vibes", cursive;
+$typeface-script: "Dancing Script", cursive;
 $typeface-sansserif: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 
 $typeface-secondary: $typeface-sansserif;
@@ -78,6 +82,8 @@ $large-break: 930px;
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);
 $large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em);
 
 $screen: "only screen";
 
@@ -89,3 +95,9 @@ $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max
 
 $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
