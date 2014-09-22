@@ -7,7 +7,7 @@ Template Name: mhc Full-spread Template
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="page fullspread">
+<div id="content" class="content page fullspread">
 	<div class="row">
 	<main id="content-primary" role="main">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

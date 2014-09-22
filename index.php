@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<main id="content" class="container home" role="main">
+<main id="content" class="content container home" role="main">
 	<?php
 	$mhc_sections = get_option( '_mhc_options' );
 	$mhc_sections = $mhc_sections['sections'];

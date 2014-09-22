@@ -7,7 +7,7 @@ Template Name: mhc Staff Template
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="archive staff grid-cols container">
+<div id="content" class="content archive staff grid-cols container">
 	<div class="row">
 	<main class="content-primary" role="main">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

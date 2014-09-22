@@ -7,7 +7,7 @@ Template Name: mhc Full-spread Template With Post Footer
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="page fullspread clear">
+<div id="content" class="content page fullspread clear">
 	<main id="content-primary" role="main">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="post" id="p<?php the_ID(); ?>">

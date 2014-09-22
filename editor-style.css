@@ -1269,23 +1269,26 @@ dd {
   max-width: 1200px;
 }
 
-#content {
+.breadcrumbs {
+  list-style: none;
+}
+.breadcrumbs li {
+  color: #fff;
+  display: inline;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.breadcrumbs strong {
+  color: #fff;
+  font-weight: normal;
+}
+
+.content {
   margin-top: 380px;
   position: relative;
   background: #f0f0f0;
 }
-@media screen and (min-width: 600px) {
-  #content {
-    margin-top: 660px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  #content {
-    margin-top: 840px;
-  }
-}
 
-.two-columns#content {
+.two-columns.content {
   background: #f3f3f3;
 }
 
@@ -1443,7 +1446,7 @@ dd {
   }
 }
 
-#content.page .post img {
+.content.page .post img {
   box-shadow: none !important;
 }
 

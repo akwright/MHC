@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<main id="content" class="fourohfour" role="main">
+<main id="content" class="content fourohfour" role="main">
 	<div class="row">
 		<header>
 			<h1>

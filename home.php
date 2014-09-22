@@ -5,7 +5,7 @@
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="page container">
+<div id="content" class="content page container">
   <div class="row">
     <main class="content-primary" role="main">
       <?php if ( have_posts() ) : ?>

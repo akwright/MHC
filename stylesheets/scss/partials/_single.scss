@@ -62,12 +62,12 @@
 }
 
 body[class~='single'] .featured-image {
-  height: 350px;
-  background-position: top !important;
-  
+  height: 100px;
+  background-image: none !important;
+
   div { display: none; }
 }
-body[class~='single'] #content { margin-top: 350px; }
+body[class~='single'] .content { margin-top: 100px; }
 
 .post-image {
   float: left;

@@ -1,8 +1,9 @@
 .sidebar {
 	@extend .column;
 	width: $three-columns;
-	padding-top: $row-height*3;
-    padding-right: 1.5em;
+	margin-top: $row-height*3;
+
+  border: 1px solid darken($color-light, 15%);
 	
 	.widget {
 		margin-right:0;
@@ -17,5 +18,23 @@
   margin: 0; padding: 0;
   list-style: none;
   
- 
+  li {
+    border-bottom: 1px solid darken($color-light, 15%);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  a {
+    display: block;
+    padding: .4em 0 .4em 1.5em;
+
+
+    -webkit-transition: all .3s;
+            transition: all .3s;
+
+    &:hover {
+      background: $color-accent;
+      color: $color-light;
+    }
+  }
 }

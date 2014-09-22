@@ -1,8 +1,12 @@
-#content.page.fullspread {
+.content.page.fullspread {
   .content-primary {
     float:none;
     width:100%;
   }
+}
+
+.page .container {
+  padding: 0 2em;
 }
 
 .spacing {

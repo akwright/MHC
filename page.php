@@ -4,9 +4,9 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="page container">
+<div id="content" class="content page container">
 	<div class="row">
-		<main class="spacing small-12 medium-9 columns" role="main">
+		<main class="spacing small-12 medium-10 medium-centered large-8 large-centered columns" role="main">
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
@@ -20,7 +20,6 @@
 			</article>
 			<?php endwhile; endif; ?>
 		</main>
-    <?php get_template_part( 'partials/sidebars/sidebar', 'page' ); ?>
 	</div>
 </div>
 <?php get_footer(); ?>

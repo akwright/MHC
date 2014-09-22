@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="archive">
+<div id="content" class="content archive">
 	<div class="row">
 		<main id="content-primary" role="main">
 		<?php if ( have_posts() ) : ?>
