@@ -1269,19 +1269,6 @@ dd {
   max-width: 1200px;
 }
 
-.breadcrumbs {
-  list-style: none;
-}
-.breadcrumbs li {
-  color: #fff;
-  display: inline;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-.breadcrumbs strong {
-  color: #fff;
-  font-weight: normal;
-}
-
 .content {
   margin-top: 380px;
   position: relative;

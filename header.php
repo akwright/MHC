@@ -93,4 +93,3 @@
         <?php } ?>
       </div>
     </section>
-    <?php the_breadcrumb(); ?>

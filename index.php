@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <main id="content" class="content container home" role="main">
+	<?php the_breadcrumb(); ?>
 	<?php
 	$mhc_sections = get_option( '_mhc_options' );
 	$mhc_sections = $mhc_sections['sections'];

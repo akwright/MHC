@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <div id="content" class="content page container">
+	<?php the_breadcrumb(); ?>
 	<div class="row">
 		<main class="spacing small-12 medium-10 medium-centered large-8 large-centered columns" role="main">
 			<?php if ( have_posts() ) : ?>

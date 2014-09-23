@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <div id="content" class="content single product">
+  <?php the_breadcrumb(); ?>
   <div class="row">
     <main class="content-primary" role="main">
       <?php while ( have_posts() ) : ?>

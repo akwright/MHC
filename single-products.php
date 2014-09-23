@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <div id="content" class="content single product">
+  <?php the_breadcrumb(); ?>
   <div class="row">
     <main class="content-primary" role="main">
       <?php while ( have_posts() ) : ?>
@@ -23,20 +24,6 @@
             <?php wp_link_pages( 'before=<div class="pagination small"><span class="title">Pages:</span>&after=</div>' ); ?>
           </section>
           <div class='post-info'>
-            <div id="prev-post" class="navigate nav-left clearfix">
-              <?php
-                $prevPost = get_previous_post();
-                $prevThumbnail = get_the_post_thumbnail($prevPost->ID, array(110,110) );
-                previous_post_link( '%link', '<span class="icon-wrap">←&nbsp; Prev</span><div><span>Previous Product</span><h3>%title</h3>'.$prevThumbnail.'</div>' );
-              ?>
-            </div>
-            <div id="next-post" class="navigate nav-right clearfix">
-              <?php
-                $nextPost = get_next_post();
-                $nextThumbnail = get_the_post_thumbnail($nextPost->ID, array(110,110) );
-                next_post_link( '%link', '<span class="icon-wrap">Next &nbsp;→</span><div><span>Next Product</span><h3>%title</h3>'.$nextThumbnail.'</div>' ); ?>
-              <?php next_image_link(); ?>
-            </div>
             <?php if ( !dynamic_sidebar( 'Post Left Aside' ) ) : ?>
             <?php endif; ?>
           </div>
@@ -48,6 +35,24 @@
         </footer>
         <?php endif; ?>
       </article>
+      <div id="prev-post" class="navigate nav-left">
+        <?php
+          $prevPost = get_previous_post();
+          $prevThumbnail = get_the_post_thumbnail($prevPost->ID, array(110,110) );
+          previous_post_link(
+            '%link',
+            '<div class="paginate clearfix"><div class="paginate-content"><span class="paginate-header">Previous Product</span><h3 class="paginate-title">%title</h3></div>'.$prevThumbnail.'</div>'
+          ); ?>
+      </div>
+      <div id="next-post" class="navigate nav-right">
+        <?php
+          $nextPost = get_next_post();
+          $nextThumbnail = get_the_post_thumbnail($nextPost->ID, array(110,110) );
+          next_post_link(
+            '%link',
+            '<div class="paginate clearfix"><div class="paginate-content"><span class="paginate-header">Next Product</span><h3 class="paginate-title">%title</h3></div>'.$nextThumbnail.'</div>'
+          ); ?>
+      </div>
       <?php endwhile; ?>      
       <?php comments_template(); ?>
     </main>

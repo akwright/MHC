@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <div id="content" class="content archive">
+	<?php the_breadcrumb(); ?>
 	<div class="row">
 		<main id="content-primary" role="main">
 			<?php if ( have_posts() ) : ?>

@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <main id="content" class="content fourohfour" role="main">
+	<?php the_breadcrumb(); ?>
 	<div class="row">
 		<header>
 			<h1>

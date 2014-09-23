@@ -3,11 +3,12 @@
  * @package MHC
  */
 /*
-Template Name: mhc Full-spread Template With Post Footer
+Template Name: Full-spread With Post Footer
 */
 ?>
 <?php get_header(); ?>
 <div id="content" class="content page fullspread clear">
+	<?php the_breadcrumb(); ?>
 	<main id="content-primary" role="main">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="post" id="p<?php the_ID(); ?>">

@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 <div id="content" class="content archive products grid-cols container">
+  <?php the_breadcrumb(); ?>
   <div class="row">
     <main class="content-primary" role="main">
       <?php if ( have_posts() ) : ?>
