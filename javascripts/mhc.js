@@ -27,35 +27,15 @@ Element.prototype.hasClass = function(className) {
 
 (function() {
   
-  var header = document.getElementById('page-header'),
-      body   = document.getElementsByTagName('body')[0],
+  var body = document.getElementsByTagName('body')[0],
   mhc = {
     
     init: function() {
-      //this.featuredImage();
       this.scrollHeader();
+      this.offscreenNav();
       //this.loadCustomPosts();
     },
-    
-    featuredImage: function() {
-      var featured = document.getElementById('featured-image'),
-          content  = document.getElementById('content');
-      
-      
-      window.addEventListener('resize', function() {
-        setHeight((window.innerWidth >= 930) ? header.clientHeight : 81);
-      });
-      
-      function setHeight(offset) {
-        content.setAttribute("style", "margin-top:" + 
-                             ( (body.hasClass('home')) ? (featured.clientHeight - 74) :
-                               (featured.clientHeight + offset) ) + "px");
-      }
-      setHeight(header.clientHeight);
-    },
-    
     scrollHeader: function() {
-      
       var featured   = document.getElementById('featured-image'),
           f_text     = featured.getElementsByClassName('js-featured_text')[0];
       
@@ -64,6 +44,35 @@ Element.prototype.hasClass = function(className) {
             f_text.style.top = 50 - ( (window.pageYOffset / 7) * 0.1) + "%";
           }
         };
+    },
+    offscreenNav: function() {
+      var mobile_trigger = document.getElementById('menu-trigger'),
+          close_mobile   = document.getElementById('close-button'),
+          content        = document.querySelector('.content-wrap'),
+          is_open = false;
+
+      function toggleMenu() {
+        if( is_open ) {
+          body.classList.remove('show-menu');
+        }
+        else {
+          body.classList.add('show-menu');
+        }
+        is_open = !is_open;
+      }
+
+      mobile_trigger.addEventListener('click', toggleMenu);
+      if (close_mobile) {
+        close_mobile.addEventListener('click', toggleMenu);
+      }
+
+      content.addEventListener( 'click', function(ev) {
+        var target = ev.target;
+        if( is_open && target !== mobile_trigger ) {
+          toggleMenu();
+        }
+      });
+      
     }
     
   };
