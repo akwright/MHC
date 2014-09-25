@@ -1286,7 +1286,7 @@ dd {
 }
 
 .content {
-  margin-top: 380px;
+  margin-top: 100px;
   position: relative;
   background: #f0f0f0;
 }
@@ -2013,7 +2013,7 @@ button, .button, input[type=submit] {
   left: 0;
   right: 0;
   width: 100%;
-  height: 400px;
+  height: 100px;
 }
 .featured-image:before {
   content: '';
@@ -2039,6 +2039,7 @@ button, .button, input[type=submit] {
   display: block;
 }
 .featured-image > div {
+  display: none;
   position: absolute;
   margin: 0;
   width: 100%;
@@ -2102,7 +2103,7 @@ button, .button, input[type=submit] {
 }
 .breadcrumbs {
   margin: 0;
-  padding-top: .3em;
+  padding-top: 1em;
   list-style: none;
 }
 .breadcrumbs li, .breadcrumbs strong {
@@ -2411,8 +2412,20 @@ body[class~='single'] .content {
   padding: 2em 0 4em;
 }
 
+.content-inner {
+  width: 73%;
+  max-width: 86%;
+  margin: 1em auto 2.5em;
+  background: #fff;
+}
+
+.content-inner .post {
+  margin: 0;
+  padding: 6% 10% 10%;
+}
+
 .page-title {
-  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: .75em;
 }
 
 .staff-heading {
@@ -2548,6 +2561,9 @@ body[class~='single'] .content {
     height: 900px;
   }
 }
+.home .featured-image > div {
+  display: block;
+}
 .home .content {
   background: transparent;
   padding: 0;
@@ -2671,8 +2687,7 @@ body[class~='single'] .content {
 
 .sidebar {
   width: 21.679%;
-  margin-top: 45px;
-  border: 1px solid #cacaca;
+  margin-top: 1em;
 }
 .sidebar .widget {
   margin-right: 0;
@@ -2683,24 +2698,34 @@ body[class~='single'] .content {
 
 .sb__menu {
   margin: 0;
-  padding: 0;
+  padding: 1.5em 0;
   list-style: none;
+  position: relative;
 }
-.sb__menu li {
-  border-bottom: 1px solid #cacaca;
+.sb__menu:before, .sb__menu:after {
+  content: '';
+  width: 30%;
+  height: 2px;
+  position: absolute;
+  background: #d6d6d6;
+}
+.sb__menu:before {
+  top: 0;
+}
+.sb__menu:after {
+  bottom: 0;
 }
 .sb__menu li:last-child {
   border-bottom: none;
 }
 .sb__menu a {
   display: block;
-  padding: .4em 0 .4em 1.5em;
+  padding: .4em 0;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 .sb__menu a:hover {
-  background: #005596;
-  color: #f0f0f0;
+  color: #333;
 }
 
 #comments-container {

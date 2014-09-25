@@ -1,9 +1,9 @@
 .sidebar {
 	@extend .column;
 	width: $three-columns;
-	margin-top: $row-height*3;
+	margin-top: 1em;
 
-  border: 1px solid darken($color-light, 15%);
+  //border: 1px solid darken($color-light, 15%);
 	
 	.widget {
 		margin-right:0;
@@ -15,26 +15,38 @@
 }
 
 .sb__menu {
-  margin: 0; padding: 0;
+  margin: 0; padding: 1.5em 0;
   list-style: none;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    background: darken($color-light, 10%);
+  }
+
+  &:before { top: 0; }
+  &:after { bottom: 0; }
   
   li {
-    border-bottom: 1px solid darken($color-light, 15%);
+    //border-bottom: 1px solid darken($color-light, 15%);
 
     &:last-child { border-bottom: none; }
   }
 
   a {
     display: block;
-    padding: .4em 0 .4em 1.5em;
+    padding: .4em 0;
 
 
     -webkit-transition: all .3s;
             transition: all .3s;
 
     &:hover {
-      background: $color-accent;
-      color: $color-light;
+      color: $color-dark;
     }
   }
 }

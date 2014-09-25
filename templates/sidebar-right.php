@@ -10,7 +10,11 @@ Template Name: Right Sidebar
   <div id="content" class="content archive grid-cols container">
     <?php the_breadcrumb(); ?>
     <div class="row">
-      <main class="spacing small-12 medium-9 columns" role="main">
+      <main class="content-inner small-12 medium-9 columns" role="main">
+        <?php
+          $url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+        ?>
+        <img src="<?php echo $url; ?>" alt="Post Featured Image">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <article class="post" id="p<?php the_ID(); ?>">
             <header class="post-header">

@@ -13,8 +13,20 @@
   padding: 2em 0 4em;
 }
 
+.content-inner {
+  width: 73%;
+  max-width: 86%;
+  margin: 1em auto 2.5em;
+  background: #fff;
+}
+
+.content-inner .post {
+  margin: 0;
+  padding: 6% 10% 10%;
+}
+
 .page-title {
-  border-bottom: 1px solid $color-light;
+  margin-bottom: .75em;
 }
 
 .staff-heading {
