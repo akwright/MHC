@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="content archive">
+<div id="content" class="content archive wrapper">
 	<?php the_breadcrumb(); ?>
 	<div class="row">
 		<main id="content-primary" role="main">

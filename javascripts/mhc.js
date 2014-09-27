@@ -41,7 +41,7 @@ Element.prototype.hasClass = function(className) {
       
         window.onscroll = function() {
           if (window.pageYOffset <= featured.offsetHeight) {
-            f_text.style.top = 50 - ( (window.pageYOffset / 7) * 0.1) + "%";
+            f_text.style.top = 55 - ( (window.pageYOffset / 4) * 0.1) + "%";
           }
         };
     },

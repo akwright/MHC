@@ -14,10 +14,10 @@
 }
 
 .content-inner {
-  width: 73%;
-  max-width: 86%;
   margin: 1em auto 2.5em;
   background: #fff;
+  border: 1px solid darken($color-light, 5%);
+  //box-shadow: 0 0 3px rgba(0,0,0,.2);
 }
 
 .content-inner .post {

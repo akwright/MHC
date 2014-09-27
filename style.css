@@ -1131,7 +1131,7 @@ img, video {
 }
 body {
   font: 112.5%/1.6 "Source Sans Pro", Arial, sans-serif;
-  background: #fffefe;
+  background: #f0f0f0;
   color: #050000;
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -1286,9 +1286,13 @@ dd {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 60px;
   position: relative;
-  background: #f0f0f0;
+}
+
+.page-parent .content,
+.page-child .content {
+  margin-top: 100px;
 }
 
 .two-columns.content {
@@ -1959,7 +1963,7 @@ button, .button, input[type=submit] {
   }
 }
 
-.menu, .sub-menu {
+.menu {
   list-style: none;
 }
 
@@ -2006,6 +2010,39 @@ button, .button, input[type=submit] {
   left: 0;
 }
 
+.sub-nav-wrapper {
+  background-color: #005596;
+}
+
+.sub-nav {
+  margin: 0 0 0 2.5em;
+  padding: 0;
+  list-style: none;
+}
+.sub-nav li {
+  display: block;
+  float: left;
+}
+.sub-nav li:first-child {
+  margin-left: 0;
+}
+.sub-nav li.current_page_item a {
+  background-color: #00477d;
+}
+.sub-nav a {
+  display: block;
+  padding: .3em 1em;
+  color: #f0f0f0;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+.sub-nav a:hover {
+  background-color: #0063b0;
+}
+.sub-nav a:active {
+  background-color: #003863;
+}
+
 .featured-image {
   display: block;
   position: fixed;
@@ -2013,7 +2050,7 @@ button, .button, input[type=submit] {
   left: 0;
   right: 0;
   width: 100%;
-  height: 100px;
+  height: 60px;
 }
 .featured-image:before {
   content: '';
@@ -2039,11 +2076,10 @@ button, .button, input[type=submit] {
   display: block;
 }
 .featured-image > div {
-  display: none;
   position: absolute;
   margin: 0;
   width: 100%;
-  top: 50%;
+  top: 55%;
   left: 0;
   right: 0;
   -webkit-transform: translateY(-50%);
@@ -2083,6 +2119,26 @@ button, .button, input[type=submit] {
   font-size: 1em;
 }
 
+.page-parent .featured-image,
+.page-child .featured-image {
+  height: 100px;
+}
+
+.page-parent .current-menu-item a:after,
+.page-parent .current-page-ancestor a:after,
+.page-child .current-menu-item a:after,
+.page-child .current-page-ancestor a:after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  margin-left: -6px;
+  height: 0;
+  width: 0;
+  border: 6px solid #005596;
+  border-color: transparent transparent #005596;
+}
+
 @media only screen and (max-width: 420px) {
   .site-nav li {
     float: none;
@@ -2103,7 +2159,7 @@ button, .button, input[type=submit] {
 }
 .breadcrumbs {
   margin: 0;
-  padding-top: 1em;
+  padding: 1em .5em 0;
   list-style: none;
 }
 .breadcrumbs li, .breadcrumbs strong {
@@ -2345,18 +2401,6 @@ button, .button, input[type=submit] {
   margin-right: 20px;
 }
 
-body[class~='single'] .featured-image {
-  height: 100px;
-  background-image: none !important;
-}
-body[class~='single'] .featured-image div {
-  display: none;
-}
-
-body[class~='single'] .content {
-  margin-top: 100px;
-}
-
 .post-image {
   float: left;
   margin-right: 2em;
@@ -2413,10 +2457,9 @@ body[class~='single'] .content {
 }
 
 .content-inner {
-  width: 73%;
-  max-width: 86%;
   margin: 1em auto 2.5em;
   background: #fff;
+  border: 1px solid #e3e3e3;
 }
 
 .content-inner .post {
@@ -2439,11 +2482,11 @@ body[class~='single'] .content {
 
 .pagination {
   padding: 1em 2em;
-  background: #eaeaea;
   border: 1px solid #e0e0e0;
   border-width: 1px 0;
 }
 .pagination a {
+  padding: 2em 4em;
   border-radius: 3px;
   font-size: 0.75em;
   text-transform: uppercase;
@@ -2713,7 +2756,7 @@ body[class~='single'] .content {
   top: 0;
 }
 .sb__menu:after {
-  bottom: 0;
+  top: 4px;
 }
 .sb__menu li:last-child {
   border-bottom: none;

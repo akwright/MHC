@@ -7,7 +7,7 @@ Template Name: Right Sidebar
 */
 ?>
 <?php get_header(); ?>
-  <div id="content" class="content archive grid-cols container">
+  <div id="content" class="content archive grid-cols container wrapper">
     <?php the_breadcrumb(); ?>
     <div class="row">
       <main class="content-inner small-12 medium-9 columns" role="main">

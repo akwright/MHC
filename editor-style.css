@@ -1115,7 +1115,7 @@ html .mceContentBody {
 
 body {
   font: 112.5%/1.6 "Source Sans Pro", Arial, sans-serif;
-  background: #fffefe;
+  background: #f0f0f0;
   color: #050000;
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -1270,9 +1270,13 @@ dd {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 60px;
   position: relative;
-  background: #f0f0f0;
+}
+
+.page-parent .content,
+.page-child .content {
+  margin-top: 100px;
 }
 
 .two-columns.content {

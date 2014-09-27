@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="content archive staff grid-cols container">
+<div id="content" class="content archive staff grid-cols container wrapper">
   <?php the_breadcrumb(); ?>
   <div class="row">
     <main class="content-primary" role="main">

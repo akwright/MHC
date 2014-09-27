@@ -1,6 +1,6 @@
 body {
 	font: 112.5%/1.6 $typeface-primary;
-	background: $color-highlight;
+	background: $color-light;
 	color: $color-off-black;
 	height: 100%;
     -webkit-font-smoothing: antialiased;
@@ -127,10 +127,11 @@ dd {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 60px;
   position: relative;
-  background: $color-light;
 }
+.page-parent .content,
+.page-child .content { margin-top: 100px; }
 
 .two-columns.content { background: lighten($color-light, 1%); }
 

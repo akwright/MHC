@@ -4,7 +4,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="content single product">
+<div id="content" class="content single product wrapper">
   <?php the_breadcrumb(); ?>
   <div class="row">
     <main class="content-primary" role="main">
