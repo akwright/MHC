@@ -1115,7 +1115,7 @@ html .mceContentBody {
 
 body {
   font: 112.5%/1.6 "Source Sans Pro", Arial, sans-serif;
-  background: #f0f0f0;
+  background: #fffefe;
   color: #050000;
   height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -1144,6 +1144,10 @@ a:hover {
 
 .right {
   float: right;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Titles */
@@ -1271,7 +1275,15 @@ dd {
 
 .content {
   margin-top: 60px;
+  padding-left: 1em;
+  padding-right: 1em;
   position: relative;
+}
+@media only screen and (min-width: 40.063em) {
+  .content {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
 }
 
 .page-parent .content,

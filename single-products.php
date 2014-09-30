@@ -7,10 +7,10 @@
 <div id="content" class="content single product wrapper">
   <?php the_breadcrumb(); ?>
   <div class="row">
-    <main class="content-primary" role="main">
+    <main class="content-inner small-12 columns" role="main">
       <?php while ( have_posts() ) : ?>
       <?php the_post(); ?>
-      <article itemscope itemtype="http://schema.org/BlogPosting" class="post">
+      <article itemscope itemtype="http://schema.org/BlogPosting" class="post small-12 medium-10 medium-centered columns">
         <header class="post-header">
           <h1 class="post-title"><?php the_title(); ?></h1>
         </header>

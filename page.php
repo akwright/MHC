@@ -4,21 +4,18 @@
  */
 ?>
 <?php get_header(); ?>
-<div id="content" class="content page container wrapper">
+<div id="content" class="content page">
 	<?php the_breadcrumb(); ?>
 	<div class="row">
-		<main class="content-inner small-12 medium-10 medium-centered columns" role="main">
+		<main role="main">
 			<?php
         $url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-        if ($url) :
+        //if ($url) :
       ?>
-      <img src="<?php echo $url; ?>" alt="Post Featured Image">
-    	<?php endif; ?>
+      <!-- <img src="<?php //echo $url; ?>" alt="Post Featured Image"> -->
+    	<?php //endif; ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<article class="post clear" id="p<?php the_ID(); ?>">
-					<header class="post-header">
-						<h1 class="post-title"><?php the_title(); ?></h1>
-					</header>
+				<article class="spacing wrapper" id="p<?php the_ID(); ?>">
 					<section class="post-content clearfix">
 						<?php the_content(); ?>
 					</section>

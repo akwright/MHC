@@ -91,6 +91,7 @@ add_theme_support( 'custom-header', $custom_header_support );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' ); 
 add_theme_support( 'custom-background', array( 'default-color' => 'fffefe' ) );
+add_theme_support( 'woocommerce' );
 
 add_image_size( 'post-image', 535, 9999 ); 
 add_image_size( 'featured-image', 980, 200, true );

@@ -36,14 +36,16 @@ Element.prototype.hasClass = function(className) {
       //this.loadCustomPosts();
     },
     scrollHeader: function() {
-      var featured   = document.getElementById('featured-image'),
-          f_text     = featured.getElementsByClassName('js-featured_text')[0];
+      if (body.hasClass('home')) {
+        var featured   = document.getElementById('featured-image'),
+            f_text     = featured.getElementsByClassName('js-featured_text')[0];
       
         window.onscroll = function() {
           if (window.pageYOffset <= featured.offsetHeight) {
             f_text.style.top = 55 - ( (window.pageYOffset / 4) * 0.1) + "%";
           }
         };
+      }
     },
     offscreenNav: function() {
       var mobile_trigger = document.getElementById('menu-trigger'),

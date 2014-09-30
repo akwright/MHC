@@ -1,18 +1,14 @@
-<article itemscope itemtype="http://schema.org/BlogPosting" <?php post_class( 'small-12 medium-6 large-4 columns' ); ?>>
+<article itemscope itemtype="http://schema.org/BlogPosting" <?php post_class( 'small-12 medium-6 large-4 columns staff-item' ); ?>>
   <section class="post-content">
     <a href="<?php the_permalink() ?>">
       <?php the_post_thumbnail( 'full' ); ?>
     </a>
     <h3 class="post-title staff-heading"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
     <?php
-      $terms = get_the_terms( $post_id, 'staff-title' );
-      $sep = '';
-      echo '<p class="staff-title">';
-      foreach ( $terms as $term ) {
-        echo $sep . $term->name;
-        $sep = ', ';
+      if ( get_post_meta ($post->ID,'staffer_staff_title', true) != '' ) {
+        echo '<p class="staff-title">';
+        echo get_post_meta ($post->ID,'staffer_staff_title', true) . '</p>';
       }
-      echo '</p>';
     ?>
   </section>
 </article>

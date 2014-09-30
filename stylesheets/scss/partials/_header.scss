@@ -14,6 +14,16 @@
   -webkit-transition: background .3s;
           transition: background .3s;
 }
+.page-parent .page-header,
+.page-child .page-header {
+
+  @media screen and (min-width: $large-break) {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .site-logo {
   @extend .left;
   margin: 0 0 0 .4em;
@@ -131,13 +141,14 @@
   background-color: $color-accent;
 }
 .sub-nav {
-  margin: 0 0 0 2.5em;
+  margin: 0 0 1px;
   padding: 0;
   list-style: none;
+  text-align: center;
 
   li {
-    display: block;
-    float: left;
+    display: inline-block;
+    margin-left: -4px;
 
     &:first-child { margin-left: 0; }
 
@@ -227,14 +238,16 @@
 .page-parent .current-page-ancestor a:after,
 .page-child .current-menu-item a:after,
 .page-child .current-page-ancestor a:after {
-  content: '';
-  position: absolute;
-  bottom: -7px; left: 50%;
-  margin-left: -6px;
-  height: 0; width: 0;
+  @media screen and (min-width: $large-break) {
+    content: '';
+    position: absolute;
+    bottom: -7px; left: 50%;
+    margin-left: -6px;
+    height: 0; width: 0;
 
-  border: 6px solid #005596;
-  border-color: transparent transparent #005596;
+    border: 6px solid #005596;
+    border-color: transparent transparent #005596;
+  }
 }
 
 @media only screen and  (max-width: 420px) {

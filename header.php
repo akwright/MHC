@@ -50,7 +50,9 @@
         </nav>
       </div>
       <?php
-        render_sub_menu();
+        if ( !is_404() ) {
+          render_sub_menu();
+        }
       ?>
     </header>
       <?php
@@ -96,11 +98,6 @@
           <?php } ?>
         </div>
         <?php
-        } else {
-        ?>
-          <section id="featured-image" class="featured-image row">
-        <?php
-      }
-      ?>
+        } ?>
         
       </section>

@@ -6,27 +6,29 @@
 }
 
 .page .container {
-  padding: 0 2em;
+  padding: 0 .5em;
+
+  @media #{$medium-up} { padding: 0 2em; }
 }
 
 .spacing {
-  padding: 2em 0 4em;
-}
-
-.content-inner {
-  margin: 1em auto 2.5em;
-  background: #fff;
-  border: 1px solid darken($color-light, 5%);
-  //box-shadow: 0 0 3px rgba(0,0,0,.2);
-}
-
-.content-inner .post {
-  margin: 0;
-  padding: 6% 10% 10%;
+  padding: 4em 0;
 }
 
 .page-title {
   margin-bottom: .75em;
+}
+
+.staff-item {
+  margin-bottom: 2.5em;
+
+  @media #{$medium-only} {
+    &:nth-of-type(2n+1) { margin-left: 0; }
+  }
+
+  @media #{$large-up} {
+    &:nth-of-type(3n+1) { margin-left: 0; }
+  }
 }
 
 .staff-heading {

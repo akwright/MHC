@@ -26,11 +26,10 @@
 
   a:hover {
     .paginate { background: $color-accent; }
-    .paginate-header {
-      color: $color-light;
-      border-color: rgba($color-light, .4);
-    }
-    .paginate-title { color: $color-light; }
+    .paginate-header { border-color: rgba($color-light, .4); }
+    .paginate-header,
+    .paginate-title,
+    .paginate-subtitle { color: $color-light; }
   }
   a:active {
     .paginate { background: darken($color-accent, 10%); }
@@ -88,12 +87,24 @@
 
 .paginate-title {
   margin: 0;
-  padding: 8px 0 10px;
+  padding: 8px 0 0;
 
   color: $color-midtone;
   font-weight: 300;
   font-size: 1.325em;
   line-height: 1.2;
+
+  -webkit-transition: color .3s;
+          transition: color .3s;
+}
+
+.paginate-subtitle {
+  margin: 0;
+
+  color: lighten($color-midtone, 20%);
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1;
 
   -webkit-transition: color .3s;
           transition: color .3s;

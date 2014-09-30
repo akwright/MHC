@@ -138,6 +138,11 @@
           transform: translate3d(0,3000px,0);
 }
 
+.links li:nth-child(7) {
+  -webkit-transform: translate3d(0,3500px,0);
+          transform: translate3d(0,3500px,0);
+}
+
 
 /* Shown menu */
 .show-menu .mobile-menu-wrap {
