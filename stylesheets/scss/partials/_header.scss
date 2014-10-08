@@ -172,7 +172,7 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   width: 100%;
-  height: 60px;
+  height: 400px;
   
   &:before {
     content: '';
@@ -231,8 +231,8 @@
   }
 }
 
-.page-parent .featured-image,
-.page-child .featured-image { height: 100px; }
+// .page-parent .featured-image,
+// .page-child .featured-image { height: 100px; }
 
 .page-parent .current-menu-item a:after,
 .page-parent .current-page-ancestor a:after,

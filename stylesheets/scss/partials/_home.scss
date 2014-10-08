@@ -25,5 +25,9 @@
     margin-top: -2.75em;
     position: relative;
     z-index: 1;
+
+    .widget {
+      background: $color-light;
+    }
   }
 }

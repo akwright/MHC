@@ -1286,21 +1286,17 @@ dd {
 }
 
 .content {
-  margin-top: 60px;
+  margin-top: 380px;
   padding-left: 1em;
   padding-right: 1em;
   position: relative;
+  background: #fff;
 }
 @media only screen and (min-width: 40.063em) {
   .content {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
-}
-
-.page-parent .content,
-.page-child .content {
-  margin-top: 100px;
 }
 
 .two-columns.content {
@@ -2068,7 +2064,7 @@ button, .button, input[type=submit] {
   left: 0;
   right: 0;
   width: 100%;
-  height: 60px;
+  height: 400px;
 }
 .featured-image:before {
   content: '';
@@ -2135,11 +2131,6 @@ button, .button, input[type=submit] {
   margin-top: .5em;
   font-weight: 400;
   font-size: 1em;
-}
-
-.page-parent .featured-image,
-.page-child .featured-image {
-  height: 100px;
 }
 
 @media screen and (min-width: 930px) {
@@ -2682,95 +2673,39 @@ button, .button, input[type=submit] {
   position: relative;
   z-index: 1;
 }
+.home .page-footer .widget {
+  background: #f0f0f0;
+}
 
 #page.attachment #page-bottom {
   display: none;
 }
 
-.products menu {
-  padding-left: 0;
+.archive.post-type-archive-product .featured-image {
+  height: 400px;
 }
-.products menu a {
-  margin-right: 2em;
-  padding: .5em 0;
-  position: relative;
-  cursor: pointer;
+.archive.post-type-archive-product .content {
+  margin-top: 380px;
 }
-.products menu a:after {
-  content: '/';
-  position: absolute;
-  color: rgba(0, 85, 150, 0.4);
-  right: -1.25em;
+.archive .featured-image {
+  height: 100px;
 }
-.products menu a:last-child {
-  margin-right: 0;
+.archive .content {
+  margin-top: 80px;
 }
-.products menu a:last-child:after {
+
+.single .featured-image {
+  height: 100px;
+}
+.single .js-featured_text {
   display: none;
 }
-.products menu .active {
-  border-bottom: 1px solid #ffcf01;
-  color: #ffcf01;
-}
-.products article.columns {
-  background: #fff;
-}
-.products .post-type {
-  display: block;
-  margin-bottom: 15px;
-  padding: .1em 0 .1em .7em;
-  color: #fff;
-  font-size: 0.875em;
-  text-transform: uppercase;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.products .post-type.specialty-beds {
-  background: #275477;
-}
-.products .post-type.pressure-prevention {
-  background: #be5a3b;
-}
-.products .post-type.advanced-healing {
-  background: #3d7d49;
-}
-.products .post-header,
-.products .post-content {
-  padding: 0 1em;
-}
-.products .post-content {
-  padding-bottom: 1em;
+.single .content {
+  margin-top: 80px;
 }
 
-.grid-cols .content-primary {
-  width: 100%;
-  padding-bottom: 0;
-  float: none;
-}
-.grid-cols article.columns {
-  margin-bottom: 30px;
-  border-radius: 3px;
-}
-.grid-cols article.columns:last-child {
-  float: left;
-}
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .grid-cols article.columns:nth-child(odd) {
-    clear: left;
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 64.063em) {
-  .grid-cols article.columns:nth-child(3n+1) {
-    clear: left;
-    margin-left: 0;
-  }
-}
-
-@media only screen and (min-width: 64.063em) {
-  .staff article.columns img {
-    width: 100%;
-  }
+.woocommerce .sidebar {
+  display: none;
 }
 
 .error404 .page-title {
@@ -2970,7 +2905,6 @@ button, .button, input[type=submit] {
   margin-bottom: 0;
   padding-top: 2em;
   padding-bottom: 2em;
-  background: #fffefe;
 }
 
 .mobile-menu-wrap {

@@ -57,33 +57,34 @@
     </header>
       <?php
         $header_image = get_header_image();
-        if (is_front_page() ) {
-          if ( $header_image ) {
-            if ( function_exists( 'get_custom_header' ) ) {
-              $header_image_width = get_theme_support( 'custom-header', 'width' );
-            } else {
-              $header_image_width = HEADER_IMAGE_WIDTH;
-            }
-
-            if ( is_singular() && has_post_thumbnail( $post->ID ) &&
-               ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( $header_image_width, $header_image_width ) ) ) &&
-                 $image[1] >= $header_image_width ) {
-              $url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-              ?>
-              <section id="featured-image" class="featured-image row" style="background: url('<?php echo $url; ?>') no-repeat top; background-size: cover;">
-            <?php
-            } else {
-              if ( function_exists( 'get_custom_header' ) ) {
-                $header_image_width  = get_custom_header()->width;
-                $header_image_height = get_custom_header()->height;
-              } else {
-                $header_image_width  = HEADER_IMAGE_WIDTH;
-                $header_image_height = HEADER_IMAGE_HEIGHT;
-              }
-            }
+        if ( $header_image ) :
+          if ( function_exists( 'get_custom_header' ) ) {
+            $header_image_width = get_theme_support( 'custom-header', 'width' );
+          } else {
+            $header_image_width = HEADER_IMAGE_WIDTH;
           }
+
+          if ( is_singular() && has_post_thumbnail( $post->ID ) &&
+             ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 
+               array( $header_image_width, $header_image_width ) ) ) &&
+               $image[1] >= $header_image_width ) :
+            $url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+            ?>
+      <section id="featured-image" class="featured-image row" style="background: url('<?php echo $url; ?>') no-repeat top; background-size: cover;">
+          <?php
+          else :
+            if ( function_exists( 'get_custom_header' ) ) {
+              $header_image_width  = get_custom_header()->width;
+              $header_image_height = get_custom_header()->height;
+            } else {
+              $header_image_width  = HEADER_IMAGE_WIDTH;
+              $header_image_height = HEADER_IMAGE_HEIGHT;
+            }
           ?>
-          <div class="js-featured_text">
+      <section id="featured-image" class="featured-image row">
+        <?php endif; ?>
+      <?php endif; ?>
+        <div class="js-featured_text">
           <?php
             $featured_text = get_post_meta( get_the_ID(), '_mhc_featured_text', true );
             if ( ! empty( $featured_text ) ) {
@@ -91,13 +92,10 @@
             } else if ( is_archive() ) {
               $post_type_data = get_post_type_object( $post_type );
               $post_type_slug = $post_type_data->rewrite['slug'];
-              echo "<h2>".$post_type_slug."</h2>";
+              echo "<h2>".$post_type_data->labels->name."</h2>";
             } else {
           ?>
           <h2><?php the_title(); ?></h2>
           <?php } ?>
         </div>
-        <?php
-        } ?>
-        
       </section>

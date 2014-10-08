@@ -33,19 +33,18 @@ Element.prototype.hasClass = function(className) {
     init: function() {
       this.scrollHeader();
       this.offscreenNav();
-      //this.loadCustomPosts();
     },
     scrollHeader: function() {
-      if (body.hasClass('home')) {
+      //if (body.hasClass('home')) {
         var featured   = document.getElementById('featured-image'),
             f_text     = featured.getElementsByClassName('js-featured_text')[0];
       
         window.onscroll = function() {
           if (window.pageYOffset <= featured.offsetHeight) {
-            f_text.style.top = 55 - ( (window.pageYOffset / 4) * 0.1) + "%";
+            f_text.style.top = 55 - ( (window.pageYOffset / 4) * 0.2) + "%";
           }
         };
-      }
+      //}
     },
     offscreenNav: function() {
       var mobile_trigger = document.getElementById('menu-trigger'),
@@ -96,44 +95,6 @@ function ajaxRequest() {
   else if (window.XMLHttpRequest) { return new XMLHttpRequest(); }
   else { return false; }
 }
-
-
-function loadCustomPosts(ele, termID) {
-  var base = window.location.origin + '/Freelance/MHC/wordpress/',
-      ajaxurl = base + 'wp-admin/admin-ajax.php',
-      my_request = new ajaxRequest(),
-      parameters = '',
-      tax_name = document.getElementById('js-taxName');
-  
-  var links = document.getElementsByClassName('js-ajax');
-  for (var i = 0, link; link = links[i]; i++) {
-    link.classList.remove('active');
-  }
-  
-  if ( typeof(termID !== 'undefined') && termID !== undefined ) {
-    parameters = 'action=load-filter2&term=' + termID;
-  } else {
-    parameters = 'action=load-filter2';
-  }
-  
-  ele.classList.add('active');
-  tax_name.innerHTML = ele.getAttribute('data-name');
-  
-  my_request.onreadystatechange = function() {
-    if ( my_request.readyState === 4 ) {
-      if ( my_request.status === 200 || window.location.href.indexOf('http') === -1 ) {
-        document.getElementsByClassName('posts')[0].innerHTML = my_request.responseText;
-      } else {
-        alert('There was an error with the request.');
-      }
-    }
-  };
-  
-  my_request.open('POST', ajaxurl, true);
-  my_request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  my_request.send(parameters);
-}
-
 
 (function() {
   var FSS;
