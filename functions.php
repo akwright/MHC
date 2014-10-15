@@ -44,8 +44,8 @@ define( 'HEADER_TEXTCOLOR', '3D302F' );
 define( 'HEADER_IMAGE', '%s/images/default_header4.jpg' );
 //define( 'HEADER_IMAGE_WIDTH', 980 );
 //define( 'HEADER_IMAGE_HEIGHT', 225 );
-define( 'HEADER_IMAGE_WIDTH', 1400 );
-define( 'HEADER_IMAGE_HEIGHT', 800 );
+define( 'HEADER_IMAGE_WIDTH', 800 );
+define( 'HEADER_IMAGE_HEIGHT', 225 );
 
 add_filter( 'wp_list_categories', 'mhc_remove_category_list_rel' );
 add_filter( 'the_category', 'mhc_remove_category_list_rel' );
@@ -441,7 +441,7 @@ if ( ! function_exists( 'mhc_enqueue_styles' ) ) {
 
 if ( ! function_exists( 'mhc_enqueue_scripts' ) ) {
     function mhc_enqueue_scripts() {
-        wp_register_script( 'mhc_scripts', get_stylesheet_directory_uri() . '/javascripts/mhc.js', false, '1.0', true );
+        wp_register_script( 'mhc_scripts', get_stylesheet_directory_uri() . '/javascripts/min/mhc-min.js', false, '1.0', true );
         wp_enqueue_script( 'mhc_scripts' );
     }
 }

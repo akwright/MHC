@@ -81,7 +81,7 @@
               $header_image_height = HEADER_IMAGE_HEIGHT;
             }
           ?>
-      <section id="featured-image" class="featured-image row">
+      <section id="featured-image" class="featured-image row" >
         <?php endif; ?>
       <?php endif; ?>
         <div class="js-featured_text">
